@@ -179,7 +179,7 @@
         </div>
         <div class="nav-right">
           <button class="nav-btn" onclick="navigateTo('screen-student-dashboard')" title="My Courses"><i data-lucide="layout-grid" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> My Courses</button>
-          <div class="profile-avatar" onclick="navigateTo('screen-student-profile')">JS</div>
+          <div class="profile-avatar" onclick="navigateTo('screen-student-profile')">WT</div>
         </div>
       </nav>
       <div class="content-center">
@@ -193,8 +193,6 @@
           <div class="error-msg" style="display:none">
             <span><i data-lucide="alert-triangle" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i></span> Invalid or expired course code. Please try again.
           </div>
-          <div class="divider"><span>or</span></div>
-          <button class="btn btn-outline" onclick="navigateTo('screen-simple-session')">Start a Simple Session</button>
         </div>
       </div>
     </div>
@@ -206,8 +204,14 @@
           <div class="logo-small"><i data-lucide="book-open" style="width:18px;height:18px;display:inline;vertical-align:-3px"></i> Virtual Classroom</div>
         </div>
         <div class="nav-right">
-          <button class="nav-btn" onclick="navigateTo('screen-student-join')">+ Join Course</button>
-          <div class="profile-avatar" onclick="navigateTo('screen-student-profile')">JS</div>
+          <div class="level-badge">
+            <span class="level-number">Lvl 7</span>
+            <div class="level-progress">
+              <div class="level-progress-bar" style="width: 65%"></div>
+            </div>
+            <span class="level-xp">650/1000 XP</span>
+          </div>
+          <div class="profile-avatar" onclick="navigateTo('screen-student-profile')">WT</div>
         </div>
       </nav>
       <div class="dashboard-content">
@@ -224,7 +228,7 @@
             </div>
           </div>
           <div class="course-card" onclick="navigateTo('screen-student-course')">
-            <div class="course-img" style="background: linear-gradient(135deg, #f093fb, #f5576c)">
+            <div class="course-img" style="background: linear-gradient(135deg, #f6d365, #f97316)">
               <span>SC</span>
             </div>
             <div class="course-info">
@@ -243,6 +247,10 @@
               <span class="course-code">Code: PHY456</span>
             </div>
           </div>
+          <div class="course-card add-course-card" onclick="navigateTo('screen-student-join')">
+            <div class="add-icon">+</div>
+            <p>Join Course</p>
+          </div>
         </div>
       </div>
     </div>
@@ -255,7 +263,7 @@
           <span class="course-title-nav">Informatics II</span>
         </div>
         <div class="nav-right">
-          <div class="profile-avatar" onclick="navigateTo('screen-student-profile')">JS</div>
+          <div class="profile-avatar" onclick="navigateTo('screen-student-profile')">WT</div>
         </div>
       </nav>
       <div class="course-page">
@@ -331,27 +339,27 @@
             </div>
             <div class="leaderboard-row gold">
               <span class="rank"><i data-lucide="trophy" style="width:16px;height:16px;display:inline;vertical-align:-3px;color:#FFD700"></i> 1</span>
-              <span class="name">Alice Chen</span>
+              <span class="name">Colt Seavers</span>
               <span class="points">245 pts</span>
             </div>
             <div class="leaderboard-row silver">
               <span class="rank"><i data-lucide="trophy" style="width:16px;height:16px;display:inline;vertical-align:-3px;color:#C0C0C0"></i> 2</span>
-              <span class="name">Bob Wilson</span>
+              <span class="name">Samwise Gamgee</span>
               <span class="points">210 pts</span>
             </div>
-            <div class="leaderboard-row bronze">
+            <div class="leaderboard-row bronze self-row">
               <span class="rank"><i data-lucide="trophy" style="width:16px;height:16px;display:inline;vertical-align:-3px;color:#CD7F32"></i> 3</span>
-              <span class="name">John Smith (You)</span>
+              <span class="name">Will Turner</span>
               <span class="points">185 pts</span>
             </div>
             <div class="leaderboard-row">
               <span class="rank">4</span>
-              <span class="name">Diana Ross</span>
+              <span class="name">Jesse Pinkman</span>
               <span class="points">160 pts</span>
             </div>
             <div class="leaderboard-row">
               <span class="rank">5</span>
-              <span class="name">Eve Miller</span>
+              <span class="name">Arya Stark</span>
               <span class="points">140 pts</span>
             </div>
           </div>
@@ -372,26 +380,26 @@
       </nav>
       <div class="profile-page">
         <div class="profile-card">
-          <div class="profile-avatar-large">JS</div>
+          <div class="profile-avatar-large">WT</div>
           <div class="profile-details">
             <div class="profile-field">
               <label>Username</label>
               <div class="field-row">
-                <span>john_smith</span>
+                <span>will_turner</span>
                 <button class="edit-btn" onclick="toggleEdit(this)"><i data-lucide="pencil" style="width:13px;height:13px;display:inline;vertical-align:-2px"></i> Edit</button>
               </div>
             </div>
             <div class="profile-field">
               <label>First Name</label>
               <div class="field-row">
-                <span>John</span>
+                <span>Will</span>
                 <button class="edit-btn" onclick="toggleEdit(this)"><i data-lucide="pencil" style="width:13px;height:13px;display:inline;vertical-align:-2px"></i> Edit</button>
               </div>
             </div>
             <div class="profile-field">
               <label>Last Name</label>
               <div class="field-row">
-                <span>Smith</span>
+                <span>Turner</span>
                 <button class="edit-btn" onclick="toggleEdit(this)"><i data-lucide="pencil" style="width:13px;height:13px;display:inline;vertical-align:-2px"></i> Edit</button>
               </div>
             </div>
@@ -435,7 +443,7 @@
         </div>
         <div class="nav-right">
           <button class="btn btn-sm btn-primary" onclick="showModal('create-course-modal')">+ Create Course</button>
-          <div class="profile-avatar teacher-avatar" onclick="navigateTo('screen-teacher-profile')">TS</div>
+          <div class="profile-avatar teacher-avatar" onclick="navigateTo('screen-teacher-profile')">GG</div>
         </div>
       </nav>
       <div class="dashboard-content">
@@ -488,7 +496,7 @@
         </div>
         <div class="nav-right">
           <button class="btn btn-sm btn-primary" onclick="navigateTo('screen-teacher-whiteboard')">+ Start Session</button>
-          <div class="profile-avatar teacher-avatar" onclick="navigateTo('screen-teacher-profile')">TS</div>
+          <div class="profile-avatar teacher-avatar" onclick="navigateTo('screen-teacher-profile')">GG</div>
         </div>
       </nav>
       <div class="course-page">
@@ -546,26 +554,26 @@
         <div class="tab-content" id="teacher-students-tab">
           <div class="student-list">
             <div class="student-row">
-              <div class="student-avatar">AC</div>
+              <div class="student-avatar">CS</div>
               <div class="student-info">
-                <span class="student-name">Alice Chen</span>
-                <span class="student-username">@alice_c</span>
+                <span class="student-name">Colt Seavers</span>
+                <span class="student-username">@colt_s</span>
               </div>
               <span class="student-points">245 pts</span>
             </div>
             <div class="student-row">
-              <div class="student-avatar">BW</div>
+              <div class="student-avatar">SG</div>
               <div class="student-info">
-                <span class="student-name">Bob Wilson</span>
-                <span class="student-username">@bob_w</span>
+                <span class="student-name">Samwise Gamgee</span>
+                <span class="student-username">@sam_g</span>
               </div>
               <span class="student-points">210 pts</span>
             </div>
             <div class="student-row">
-              <div class="student-avatar">JS</div>
+              <div class="student-avatar">WT</div>
               <div class="student-info">
-                <span class="student-name">John Smith</span>
-                <span class="student-username">@john_smith</span>
+                <span class="student-name">Will Turner</span>
+                <span class="student-username">@will_t</span>
               </div>
               <span class="student-points">185 pts</span>
             </div>
@@ -580,17 +588,17 @@
             </div>
             <div class="leaderboard-row gold">
               <span class="rank"><i data-lucide="trophy" style="width:16px;height:16px;display:inline;vertical-align:-3px;color:#FFD700"></i> 1</span>
-              <span class="name">Alice Chen</span>
+              <span class="name">Colt Seavers</span>
               <span class="points">245 pts</span>
             </div>
             <div class="leaderboard-row silver">
               <span class="rank"><i data-lucide="trophy" style="width:16px;height:16px;display:inline;vertical-align:-3px;color:#C0C0C0"></i> 2</span>
-              <span class="name">Bob Wilson</span>
+              <span class="name">Samwise Gamgee</span>
               <span class="points">210 pts</span>
             </div>
             <div class="leaderboard-row bronze">
               <span class="rank"><i data-lucide="trophy" style="width:16px;height:16px;display:inline;vertical-align:-3px;color:#CD7F32"></i> 3</span>
-              <span class="name">John Smith</span>
+              <span class="name">Will Turner</span>
               <span class="points">185 pts</span>
             </div>
           </div>
@@ -611,26 +619,26 @@
       </nav>
       <div class="profile-page">
         <div class="profile-card">
-          <div class="profile-avatar-large teacher-avatar">TS</div>
+          <div class="profile-avatar-large teacher-avatar">GG</div>
           <div class="profile-details">
             <div class="profile-field">
               <label>Username</label>
               <div class="field-row">
-                <span>teacher_smith</span>
+                <span>gandalf_grey</span>
                 <button class="edit-btn" onclick="toggleEdit(this)"><i data-lucide="pencil" style="width:13px;height:13px;display:inline;vertical-align:-2px"></i> Edit</button>
               </div>
             </div>
             <div class="profile-field">
               <label>First Name</label>
               <div class="field-row">
-                <span>Teacher</span>
+                <span>Gandalf</span>
                 <button class="edit-btn" onclick="toggleEdit(this)"><i data-lucide="pencil" style="width:13px;height:13px;display:inline;vertical-align:-2px"></i> Edit</button>
               </div>
             </div>
             <div class="profile-field">
               <label>Last Name</label>
               <div class="field-row">
-                <span>Smith</span>
+                <span>Grey</span>
                 <button class="edit-btn" onclick="toggleEdit(this)"><i data-lucide="pencil" style="width:13px;height:13px;display:inline;vertical-align:-2px"></i> Edit</button>
               </div>
             </div>
@@ -654,7 +662,7 @@
           <span class="course-title-nav">Simple Session</span>
         </div>
         <div class="nav-right">
-          <div class="profile-avatar" onclick="navigateTo('screen-student-profile')">JS</div>
+          <div class="profile-avatar" onclick="navigateTo('screen-student-profile')">WT</div>
         </div>
       </nav>
       <div class="content-center">
@@ -776,7 +784,7 @@
           </div>
           <div class="chat-messages">
             <div class="chat-msg">
-              <span class="chat-author">Alice Chen</span>
+              <span class="chat-author">Colt Seavers</span>
               <span class="chat-time">10:32</span>
               <p>Can you explain the tree diagram again?</p>
             </div>
@@ -786,7 +794,7 @@
               <p>Sure, I'll draw it again on the next page.</p>
             </div>
             <div class="chat-msg">
-              <span class="chat-author">Bob Wilson</span>
+              <span class="chat-author">Samwise Gamgee</span>
               <span class="chat-time">10:34</span>
               <p>Thanks!</p>
             </div>
@@ -835,15 +843,15 @@
           </div>
           <div class="student-tab" onclick="selectStudentTab(this, 'alice')">
             <i data-lucide="user" style="width:13px;height:13px"></i>
-            Alice Chen
+            Colt Seavers
           </div>
           <div class="student-tab" onclick="selectStudentTab(this, 'bob')">
             <i data-lucide="user" style="width:13px;height:13px"></i>
-            Bob Wilson
+            Samwise Gamgee
           </div>
           <div class="student-tab" onclick="selectStudentTab(this, 'john')">
             <i data-lucide="user" style="width:13px;height:13px"></i>
-            John Smith
+            Will Turner
           </div>
         </div>
         <div class="whiteboard-teacher-main">
@@ -874,7 +882,7 @@
           <div class="student-wb-header">
             <div class="student-wb-title">
               <i data-lucide="user" style="width:16px;height:16px"></i>
-              <span id="student-wb-name">Alice Chen's Whiteboard</span>
+              <span id="student-wb-name">Colt Seavers's Whiteboard</span>
             </div>
             <button class="tool-btn" onclick="toggleStudentPanel()" title="Collapse">
               <i data-lucide="panel-left-close" style="width:18px;height:18px"></i>
@@ -906,7 +914,7 @@
           </div>
           <div class="chat-messages">
             <div class="chat-msg">
-              <span class="chat-author">Alice Chen</span>
+              <span class="chat-author">Colt Seavers</span>
               <span class="chat-time">10:32</span>
               <p>Can you explain the tree diagram again?</p>
             </div>
@@ -1105,7 +1113,7 @@
           <button class="modal-close" onclick="hideModal('points-modal')"><i data-lucide="x" style="width:14px;height:14px"></i></button>
         </div>
         <div class="modal-body">
-          <p>Award points to <strong>Alice Chen</strong> for participation.</p>
+          <p>Award points to <strong>Colt Seavers</strong> for participation.</p>
           <div class="points-selector">
             <button class="points-btn" onclick="selectPoints(this, 5)">+5</button>
             <button class="points-btn active" onclick="selectPoints(this, 10)">+10</button>
@@ -1114,7 +1122,7 @@
           </div>
           <div class="modal-actions">
             <button class="btn btn-outline" onclick="hideModal('points-modal')">Cancel</button>
-            <button class="btn btn-primary" onclick="hideModal('points-modal'); showToast('10 points awarded to Alice Chen!')">Award Points</button>
+            <button class="btn btn-primary" onclick="hideModal('points-modal'); showToast('10 points awarded to Colt Seavers!')">Award Points</button>
           </div>
         </div>
       </div>

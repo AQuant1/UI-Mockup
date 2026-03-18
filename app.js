@@ -85,7 +85,7 @@ function toggleMultiMode(btn) {
 function selectStudentTab(tab, studentId) {
   const panel = document.getElementById('student-wb-panel');
   const nameEl = document.getElementById('student-wb-name');
-  const studentNames = { alice: 'Alice Chen', bob: 'Bob Wilson', john: 'John Smith' };
+  const studentNames = { alice: 'Colt Seavers', bob: 'Samwise Gamgee', john: 'Will Turner' };
 
   // Update active tab
   document.querySelectorAll('.student-tab').forEach(t => {

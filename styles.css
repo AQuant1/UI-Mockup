@@ -491,6 +491,49 @@ html, body {
   border-color: rgba(16, 185, 129, 0.2);
 }
 
+/* Level badge */
+.level-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: var(--glass-shadow);
+}
+
+.level-number {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+.level-progress {
+  width: 80px;
+  height: 6px;
+  background: rgba(91, 108, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.level-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), #818cf8);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.level-xp {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
 .back-btn-nav {
   background: none;
   border: none;
@@ -609,13 +652,13 @@ html, body {
 }
 .code-input {
   flex: 1;
-  padding: 14px 18px;
+  padding: 12px 16px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  font-size: 20px;
+  font-size: 15px;
   text-align: center;
-  letter-spacing: 6px;
-  font-weight: 700;
+  letter-spacing: 3px;
+  font-weight: 600;
   outline: none;
   transition: all 0.2s;
   background: var(--surface);
@@ -794,6 +837,11 @@ html, body {
 .leaderboard-row.gold { background: rgba(251, 191, 36, 0.06); }
 .leaderboard-row.silver { background: rgba(156, 163, 175, 0.06); }
 .leaderboard-row.bronze { background: rgba(245, 158, 11, 0.06); }
+.leaderboard-row.self-row {
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  background: rgba(91, 108, 255, 0.05);
+}
 .rank { font-weight: 700; font-size: 14px; }
 .name { font-weight: 500; }
 .points { font-weight: 700; color: var(--primary); text-align: right; }

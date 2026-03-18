@@ -1,5 +1,7 @@
 # Virtual Classroom - Interactive Wireframe Prototype
 
+### [View Live Prototype](https://aquant1.github.io/UI-Mockup/)
+
 An interactive HTML/CSS/JS prototype for **Virtual Classroom**, an educational platform that enables real-time whiteboard-based teaching and collaboration between teachers and students.
 
 Built with vanilla HTML/CSS/JS, [Lucide Icons](https://lucide.dev), and an iOS 26-inspired liquid glass design system.

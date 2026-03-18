@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Classroom - Interactive Wireframe Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+  <!-- Animated floating shapes background -->
+  <div class="floating-bg" aria-hidden="true">
+    <!-- Math symbols -->
+    <span class="float-shape" style="--x:5%;--y:15%;--dur:18s;--delay:0s;--size:180px;--shape-color:rgba(91,108,255,0.12);">+</span>
+    <span class="float-shape" style="--x:15%;--y:70%;--dur:22s;--delay:2s;--size:60px;--shape-color:rgba(245,87,108,0.25);">%</span>
+    <span class="float-shape" style="--x:25%;--y:30%;--dur:20s;--delay:4s;--size:140px;--shape-color:rgba(52,211,153,0.14);">&#x25B3;</span>
+    <span class="float-shape" style="--x:35%;--y:85%;--dur:24s;--delay:1s;--size:90px;--shape-color:rgba(168,85,247,0.22);">&#x03C0;</span>
+    <span class="float-shape" style="--x:45%;--y:20%;--dur:19s;--delay:3s;--size:200px;--shape-color:rgba(251,191,36,0.10);">&#x221A;</span>
+    <span class="float-shape" style="--x:55%;--y:60%;--dur:21s;--delay:5s;--size:70px;--shape-color:rgba(91,108,255,0.22);">&#x25CB;</span>
+    <span class="float-shape" style="--x:65%;--y:40%;--dur:23s;--delay:2s;--size:160px;--shape-color:rgba(245,87,108,0.11);">&#x2211;</span>
+    <span class="float-shape" style="--x:75%;--y:75%;--dur:17s;--delay:4s;--size:72px;--shape-color:rgba(59,130,246,0.25);">&#x00F7;</span>
+    <span class="float-shape" style="--x:85%;--y:25%;--dur:25s;--delay:1s;--size:100px;--shape-color:rgba(52,211,153,0.15);">&#x25A1;</span>
+    <span class="float-shape" style="--x:92%;--y:55%;--dur:20s;--delay:3s;--size:80px;--shape-color:rgba(168,85,247,0.22);">&#x222B;</span>
+    <span class="float-shape" style="--x:10%;--y:45%;--dur:22s;--delay:6s;--size:220px;--shape-color:rgba(251,191,36,0.08);">&#x00D7;</span>
+    <span class="float-shape" style="--x:30%;--y:55%;--dur:19s;--delay:7s;--size:66px;--shape-color:rgba(59,130,246,0.25);">&#x2206;</span>
+    <span class="float-shape" style="--x:50%;--y:90%;--dur:26s;--delay:0s;--size:150px;--shape-color:rgba(245,87,108,0.12);">&#x221E;</span>
+    <span class="float-shape" style="--x:70%;--y:10%;--dur:21s;--delay:5s;--size:100px;--shape-color:rgba(52,211,153,0.18);">&#x25B7;</span>
+    <span class="float-shape" style="--x:88%;--y:80%;--dur:18s;--delay:8s;--size:62px;--shape-color:rgba(91,108,255,0.25);">=</span>
+    <span class="float-shape" style="--x:40%;--y:5%;--dur:23s;--delay:2s;--size:190px;--shape-color:rgba(168,85,247,0.09);">&#x00B1;</span>
+    <span class="float-shape" style="--x:20%;--y:92%;--dur:20s;--delay:9s;--size:58px;--shape-color:rgba(59,130,246,0.22);">&#x03B1;</span>
+    <span class="float-shape" style="--x:60%;--y:35%;--dur:24s;--delay:4s;--size:100px;--shape-color:rgba(251,191,36,0.13);">&#x25CB;</span>
+    <span class="float-shape" style="--x:80%;--y:50%;--dur:19s;--delay:6s;--size:74px;--shape-color:rgba(52,211,153,0.25);">&#x2248;</span>
+    <span class="float-shape" style="--x:48%;--y:48%;--dur:27s;--delay:1s;--size:170px;--shape-color:rgba(91,108,255,0.10);">&#x03A3;</span>
+    <!-- Numbers -->
+    <span class="float-shape" style="--x:8%;--y:35%;--dur:21s;--delay:3s;--size:160px;--shape-color:rgba(245,87,108,0.10);">7</span>
+    <span class="float-shape" style="--x:72%;--y:65%;--dur:19s;--delay:1s;--size:68px;--shape-color:rgba(91,108,255,0.22);">3</span>
+    <span class="float-shape" style="--x:42%;--y:78%;--dur:25s;--delay:5s;--size:200px;--shape-color:rgba(52,211,153,0.08);">9</span>
+    <span class="float-shape" style="--x:90%;--y:15%;--dur:20s;--delay:7s;--size:82px;--shape-color:rgba(168,85,247,0.20);">2</span>
+    <span class="float-shape" style="--x:18%;--y:58%;--dur:23s;--delay:0s;--size:100px;--shape-color:rgba(251,191,36,0.15);">5</span>
+    <span class="float-shape" style="--x:58%;--y:12%;--dur:18s;--delay:4s;--size:180px;--shape-color:rgba(59,130,246,0.09);">1</span>
+    <span class="float-shape" style="--x:78%;--y:88%;--dur:24s;--delay:2s;--size:64px;--shape-color:rgba(245,87,108,0.22);">8</span>
+    <span class="float-shape" style="--x:33%;--y:8%;--dur:22s;--delay:6s;--size:100px;--shape-color:rgba(52,211,153,0.14);">4</span>
+    <span class="float-shape" style="--x:95%;--y:42%;--dur:26s;--delay:8s;--size:72px;--shape-color:rgba(91,108,255,0.20);">6</span>
+    <span class="float-shape" style="--x:52%;--y:52%;--dur:17s;--delay:3s;--size:140px;--shape-color:rgba(168,85,247,0.10);">0</span>
+  </div>
+
+  <div id="app">
+    <!-- ==================== WELCOME SCREEN ==================== -->
+    <div class="screen active" id="screen-welcome">
+      <div class="welcome-container">
+        <div class="logo">
+          <h1>Virtual Classroom</h1>
+          <p class="subtitle">Interactive Learning Platform</p>
+        </div>
+        <p class="welcome-text">Choose your role to get started</p>
+        <div class="role-cards">
+          <div class="role-card" onclick="navigateTo('screen-register-student')">
+            <div class="role-icon"><i data-lucide="graduation-cap" style="width:48px;height:48px;stroke-width:1.5"></i></div>
+            <h3>Student</h3>
+            <p>Join courses, collaborate, and learn</p>
+          </div>
+          <div class="role-card" onclick="navigateTo('screen-register-teacher')">
+            <div class="role-icon"><i data-lucide="presentation" style="width:48px;height:48px;stroke-width:1.5"></i></div>
+            <h3>Teacher</h3>
+            <p>Create courses and manage sessions</p>
+          </div>
+        </div>
+        <p class="login-link">Already have an account? <a href="#" onclick="navigateTo('screen-login')">Log in</a></p>
+      </div>
+    </div>
+
+    <!-- ==================== STUDENT REGISTRATION ==================== -->
+    <div class="screen" id="screen-register-student">
+      <div class="auth-container">
+        <button class="back-btn" onclick="navigateTo('screen-welcome')"><i data-lucide="arrow-left" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Back</button>
+        <div class="auth-header">
+          <div class="role-badge student"><i data-lucide="graduation-cap" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Student</div>
+          <h2>Create Your Account</h2>
+          <p>Fill in your details to get started</p>
+        </div>
+        <form class="auth-form" onsubmit="event.preventDefault(); navigateTo('screen-student-dashboard')">
+          <div class="form-group">
+            <label>First Name *</label>
+            <input type="text" placeholder="Enter your first name" required>
+          </div>
+          <div class="form-group">
+            <label>Last Name *</label>
+            <input type="text" placeholder="Enter your last name" required>
+          </div>
+          <div class="form-group">
+            <label>Username *</label>
+            <input type="text" placeholder="Choose a unique username" required>
+            <span class="field-hint">Must be unique</span>
+          </div>
+          <div class="form-group">
+            <label>Password *</label>
+            <input type="password" placeholder="Create a password" required>
+          </div>
+          <div class="error-msg" id="student-reg-error" style="display:none">
+            <span><i data-lucide="alert-triangle" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i></span> Username already exists. Please choose another.
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Sign Up</button>
+        </form>
+        <p class="auth-switch">Already have an account? <a href="#" onclick="navigateTo('screen-login')">Log in</a></p>
+      </div>
+    </div>
+
+    <!-- ==================== TEACHER REGISTRATION ==================== -->
+    <div class="screen teacher-ui" id="screen-register-teacher">
+      <div class="auth-container">
+        <button class="back-btn" onclick="navigateTo('screen-welcome')"><i data-lucide="arrow-left" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Back</button>
+        <div class="auth-header">
+          <div class="role-badge teacher"><i data-lucide="presentation" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Teacher</div>
+          <h2>Create Teacher Account</h2>
+          <p>Set up your teaching profile</p>
+        </div>
+        <form class="auth-form" onsubmit="event.preventDefault(); navigateTo('screen-teacher-dashboard')">
+          <div class="form-group">
+            <label>First Name *</label>
+            <input type="text" placeholder="Enter your first name" required>
+          </div>
+          <div class="form-group">
+            <label>Last Name *</label>
+            <input type="text" placeholder="Enter your last name" required>
+          </div>
+          <div class="form-group">
+            <label>Username *</label>
+            <input type="text" placeholder="Choose a unique username" required>
+            <span class="field-hint">Must be unique</span>
+          </div>
+          <div class="form-group">
+            <label>Password *</label>
+            <input type="password" placeholder="Create a password" required>
+          </div>
+          <div class="error-msg" id="teacher-reg-error" style="display:none">
+            <span><i data-lucide="alert-triangle" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i></span> Username already exists. Please choose another.
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Sign Up as Teacher</button>
+        </form>
+        <p class="auth-switch">Already have an account? <a href="#" onclick="navigateTo('screen-login')">Log in</a></p>
+      </div>
+    </div>
+
+    <!-- ==================== LOGIN ==================== -->
+    <div class="screen" id="screen-login">
+      <div class="auth-container">
+        <button class="back-btn" onclick="navigateTo('screen-welcome')"><i data-lucide="arrow-left" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Back</button>
+        <div class="auth-header">
+          <h2>Welcome Back</h2>
+          <p>Log in to your account</p>
+        </div>
+        <form class="auth-form" onsubmit="event.preventDefault()">
+          <div class="form-group">
+            <label>Username</label>
+            <input type="text" placeholder="Enter your username" required>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password" required>
+          </div>
+          <div class="login-role-toggle">
+            <label class="toggle-label">Login as:</label>
+            <div class="toggle-group">
+              <button type="button" class="toggle-btn active" onclick="selectLoginRole(this, 'student')">Student</button>
+              <button type="button" class="toggle-btn" onclick="selectLoginRole(this, 'teacher')">Teacher</button>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary btn-full" onclick="handleLogin()">Log In</button>
+        </form>
+        <p class="auth-switch">Don't have an account? <a href="#" onclick="navigateTo('screen-welcome')">Sign up</a></p>
+      </div>
+    </div>
+
+    <!-- ==================== STUDENT: JOIN COURSE ==================== -->
+    <div class="screen" id="screen-student-join">
+      <nav class="top-nav">
+        <div class="nav-left">
+          <div class="logo-small"><i data-lucide="book-open" style="width:18px;height:18px;display:inline;vertical-align:-3px"></i> Virtual Classroom</div>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" onclick="navigateTo('screen-student-dashboard')" title="My Courses"><i data-lucide="layout-grid" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> My Courses</button>
+          <div class="profile-avatar" onclick="navigateTo('screen-student-profile')">JS</div>
+        </div>
+      </nav>
+      <div class="content-center">
+        <div class="join-card">
+          <h2>Join a Course</h2>
+          <p>Enter the course code provided by your teacher</p>
+          <div class="code-input-group">
+            <input type="text" class="code-input" placeholder="Enter course code" maxlength="8">
+            <button class="btn btn-primary" onclick="navigateTo('screen-student-dashboard')">Join</button>
+          </div>
+          <div class="error-msg" style="display:none">
+            <span><i data-lucide="alert-triangle" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i></span> Invalid or expired course code. Please try again.
+          </div>
+          <div class="divider"><span>or</span></div>
+          <button class="btn btn-outline" onclick="navigateTo('screen-simple-session')">Start a Simple Session</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== STUDENT DASHBOARD ==================== -->
+    <div class="screen" id="screen-student-dashboard">
+      <nav class="top-nav">
+        <div class="nav-left">
+          <div class="logo-small"><i data-lucide="book-open" style="width:18px;height:18px;display:inline;vertical-align:-3px"></i> Virtual Classroom</div>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" onclick="navigateTo('screen-student-join')">+ Join Course</button>
+          <button class="nav-btn" onclick="navigateTo('screen-simple-session')"><i data-lucide="zap" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Simple Session</button>
+          <div class="profile-avatar" onclick="navigateTo('screen-student-profile')">JS</div>
+        </div>
+      </nav>
+      <div class="dashboard-content">
+        <h2>My Courses</h2>
+        <div class="course-grid">
+          <div class="course-card" onclick="navigateTo('screen-student-course')">
+            <div class="course-img" style="background: linear-gradient(135deg, #667eea, #764ba2)">
+              <span>IN</span>
+            </div>
+            <div class="course-info">
+              <h3>Informatics II</h3>
+              <p>Prof. Böhlen</p>
+              <span class="course-code">Code: ABC123</span>
+            </div>
+          </div>
+          <div class="course-card" onclick="navigateTo('screen-student-course')">
+            <div class="course-img" style="background: linear-gradient(135deg, #f093fb, #f5576c)">
+              <span>SC</span>
+            </div>
+            <div class="course-info">
+              <h3>Software Construction</h3>
+              <p>Prof. Bacchelli</p>
+              <span class="course-code">Code: XYZ789</span>
+            </div>
+          </div>
+          <div class="course-card" onclick="navigateTo('screen-student-course')">
+            <div class="course-img" style="background: linear-gradient(135deg, #4facfe, #00f2fe)">
+              <span>DB</span>
+            </div>
+            <div class="course-info">
+              <h3>Database Systems</h3>
+              <p>Prof. Sven</p>
+              <span class="course-code">Code: PHY456</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== STUDENT COURSE PAGE ==================== -->
+    <div class="screen" id="screen-student-course">
+      <nav class="top-nav">
+        <div class="nav-left">
+          <button class="back-btn-nav" onclick="navigateTo('screen-student-dashboard')"><i data-lucide="arrow-left" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Back</button>
+          <span class="course-title-nav">Informatics II</span>
+        </div>
+        <div class="nav-right">
+          <div class="profile-avatar" onclick="navigateTo('screen-student-profile')">JS</div>
+        </div>
+      </nav>
+      <div class="course-page">
+        <div class="course-header-banner" style="background: linear-gradient(135deg, #667eea, #764ba2)">
+          <h2>Informatics II</h2>
+          <p>Prof. Böhlen &bull; Code: ABC123</p>
+        </div>
+        <div class="course-tabs">
+          <button class="tab active" onclick="switchTab(this, 'sessions-tab')">Sessions</button>
+          <button class="tab" onclick="switchTab(this, 'materials-tab')">Materials</button>
+          <button class="tab" onclick="switchTab(this, 'leaderboard-tab')">Leaderboard</button>
+        </div>
+        <div class="tab-content active" id="sessions-tab">
+          <div class="session-list">
+            <div class="session-item active-session" onclick="navigateTo('screen-student-whiteboard')">
+              <div class="session-status live">LIVE</div>
+              <div class="session-info">
+                <h4>Lecture 5: Data Structures</h4>
+                <p>Started 10 min ago</p>
+              </div>
+              <button class="btn btn-sm btn-primary">Join</button>
+            </div>
+            <div class="session-item">
+              <div class="session-status ended">Ended</div>
+              <div class="session-info">
+                <h4>Lecture 4: Algorithms</h4>
+                <p>Mar 15, 2026</p>
+              </div>
+              <button class="btn btn-sm btn-outline">View PDF</button>
+            </div>
+            <div class="session-item">
+              <div class="session-status ended">Ended</div>
+              <div class="session-info">
+                <h4>Lecture 3: Variables & Types</h4>
+                <p>Mar 12, 2026</p>
+              </div>
+              <button class="btn btn-sm btn-outline">View PDF</button>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content" id="materials-tab">
+          <div class="materials-list">
+            <div class="material-item">
+              <span class="material-icon"><i data-lucide="file-text" style="width:24px;height:24px"></i></span>
+              <div class="material-info">
+                <h4>Lecture 4 - Whiteboard.pdf</h4>
+                <p>Teacher's whiteboard &bull; Mar 15</p>
+              </div>
+              <div class="material-actions">
+                <button class="btn btn-sm btn-outline">Download</button>
+                <button class="btn btn-sm btn-accent" onclick="showToast('Summarizing PDF with AI...')"><i data-lucide="sparkles" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Summarize</button>
+              </div>
+            </div>
+            <div class="material-item">
+              <span class="material-icon"><i data-lucide="file-text" style="width:24px;height:24px"></i></span>
+              <div class="material-info">
+                <h4>Lecture 3 - Whiteboard.pdf</h4>
+                <p>Teacher's whiteboard &bull; Mar 12</p>
+              </div>
+              <div class="material-actions">
+                <button class="btn btn-sm btn-outline">Download</button>
+                <button class="btn btn-sm btn-accent"><i data-lucide="sparkles" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Summarize</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content" id="leaderboard-tab">
+          <div class="leaderboard">
+            <div class="leaderboard-header">
+              <span>Rank</span>
+              <span>Student</span>
+              <span>Points</span>
+            </div>
+            <div class="leaderboard-row gold">
+              <span class="rank"><i data-lucide="trophy" style="width:16px;height:16px;display:inline;vertical-align:-3px;color:#FFD700"></i> 1</span>
+              <span class="name">Alice Chen</span>
+              <span class="points">245 pts</span>
+            </div>
+            <div class="leaderboard-row silver">
+              <span class="rank"><i data-lucide="trophy" style="width:16px;height:16px;display:inline;vertical-align:-3px;color:#C0C0C0"></i> 2</span>
+              <span class="name">Bob Wilson</span>
+              <span class="points">210 pts</span>
+            </div>
+            <div class="leaderboard-row bronze">
+              <span class="rank"><i data-lucide="trophy" style="width:16px;height:16px;display:inline;vertical-align:-3px;color:#CD7F32"></i> 3</span>
+              <span class="name">John Smith (You)</span>
+              <span class="points">185 pts</span>
+            </div>
+            <div class="leaderboard-row">
+              <span class="rank">4</span>
+              <span class="name">Diana Ross</span>
+              <span class="points">160 pts</span>
+            </div>
+            <div class="leaderboard-row">
+              <span class="rank">5</span>
+              <span class="name">Eve Miller</span>
+              <span class="points">140 pts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== STUDENT PROFILE ==================== -->
+    <div class="screen" id="screen-student-profile">
+      <nav class="top-nav">
+        <div class="nav-left">
+          <button class="back-btn-nav" onclick="navigateTo('screen-student-dashboard')"><i data-lucide="arrow-left" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Back</button>
+          <span class="course-title-nav">My Profile</span>
+        </div>
+        <div class="nav-right">
+          <button class="btn btn-sm btn-danger" onclick="navigateTo('screen-welcome')"><i data-lucide="log-out" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Logout</button>
+        </div>
+      </nav>
+      <div class="profile-page">
+        <div class="profile-card">
+          <div class="profile-avatar-large">JS</div>
+          <div class="profile-details">
+            <div class="profile-field">
+              <label>Username</label>
+              <div class="field-row">
+                <span>john_smith</span>
+                <button class="edit-btn" onclick="toggleEdit(this)"><i data-lucide="pencil" style="width:13px;height:13px;display:inline;vertical-align:-2px"></i> Edit</button>
+              </div>
+            </div>
+            <div class="profile-field">
+              <label>First Name</label>
+              <div class="field-row">
+                <span>John</span>
+                <button class="edit-btn" onclick="toggleEdit(this)"><i data-lucide="pencil" style="width:13px;height:13px;display:inline;vertical-align:-2px"></i> Edit</button>
+              </div>
+            </div>
+            <div class="profile-field">
+              <label>Last Name</label>
+              <div class="field-row">
+                <span>Smith</span>
+                <button class="edit-btn" onclick="toggleEdit(this)"><i data-lucide="pencil" style="width:13px;height:13px;display:inline;vertical-align:-2px"></i> Edit</button>
+              </div>
+            </div>
+            <div class="profile-field">
+              <label>Role</label>
+              <div class="field-row">
+                <span class="role-badge student"><i data-lucide="graduation-cap" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Student</span>
+              </div>
+            </div>
+            <button class="btn btn-outline btn-full" onclick="showModal('password-modal')">Change Password</button>
+          </div>
+        </div>
+        <div class="profile-courses">
+          <h3>Enrolled Courses</h3>
+          <div class="mini-course-list">
+            <div class="mini-course" onclick="navigateTo('screen-student-course')">
+              <div class="mini-dot" style="background: #667eea"></div>
+              <span>Informatics II</span>
+              <span class="mini-course-points">185 pts</span>
+            </div>
+            <div class="mini-course">
+              <div class="mini-dot" style="background: #f5576c"></div>
+              <span>Software Construction</span>
+              <span class="mini-course-points">120 pts</span>
+            </div>
+            <div class="mini-course">
+              <div class="mini-dot" style="background: #4facfe"></div>
+              <span>Database Systems</span>
+              <span class="mini-course-points">95 pts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TEACHER DASHBOARD ==================== -->
+    <div class="screen teacher-ui" id="screen-teacher-dashboard">
+      <nav class="top-nav">
+        <div class="nav-left">
+          <div class="logo-small"><i data-lucide="book-open" style="width:18px;height:18px;display:inline;vertical-align:-3px"></i> Virtual Classroom</div>
+        </div>
+        <div class="nav-right">
+          <button class="btn btn-sm btn-primary" onclick="showModal('create-course-modal')">+ Create Course</button>
+          <div class="profile-avatar teacher-avatar" onclick="navigateTo('screen-teacher-profile')">TS</div>
+        </div>
+      </nav>
+      <div class="dashboard-content">
+        <h2>My Courses</h2>
+        <div class="course-grid">
+          <div class="course-card teacher-card" onclick="navigateTo('screen-teacher-course')">
+            <div class="course-img" style="background: linear-gradient(135deg, #667eea, #764ba2)">
+              <span>IN</span>
+            </div>
+            <div class="course-info">
+              <h3>Informatics II</h3>
+              <p>12 students &bull; 5 sessions</p>
+              <span class="course-code">Code: ABC123</span>
+            </div>
+            <div class="card-actions">
+              <button class="icon-btn" onclick="event.stopPropagation(); showModal('edit-course-modal')" title="Edit"><i data-lucide="pencil" style="width:16px;height:16px"></i></button>
+              <button class="icon-btn" onclick="event.stopPropagation(); showModal('delete-course-modal')" title="Delete"><i data-lucide="trash-2" style="width:16px;height:16px"></i></button>
+              <button class="icon-btn" onclick="event.stopPropagation(); showModal('share-course-modal')" title="Share QR"><i data-lucide="share-2" style="width:16px;height:16px"></i></button>
+            </div>
+          </div>
+          <div class="course-card teacher-card" onclick="navigateTo('screen-teacher-course')">
+            <div class="course-img" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb)">
+              <span>DS</span>
+            </div>
+            <div class="course-info">
+              <h3>Data Structures</h3>
+              <p>8 students &bull; 3 sessions</p>
+              <span class="course-code">Code: DST456</span>
+            </div>
+            <div class="card-actions">
+              <button class="icon-btn" title="Edit"><i data-lucide="pencil" style="width:16px;height:16px"></i></button>
+              <button class="icon-btn" title="Delete"><i data-lucide="trash-2" style="width:16px;height:16px"></i></button>
+              <button class="icon-btn" title="Share QR"><i data-lucide="share-2" style="width:16px;height:16px"></i></button>
+            </div>
+          </div>
+          <div class="course-card add-course-card" onclick="showModal('create-course-modal')">
+            <div class="add-icon">+</div>
+            <p>Create New Course</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TEACHER COURSE PAGE ==================== -->
+    <div class="screen teacher-ui" id="screen-teacher-course">
+      <nav class="top-nav">
+        <div class="nav-left">
+          <button class="back-btn-nav" onclick="navigateTo('screen-teacher-dashboard')"><i data-lucide="arrow-left" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Back</button>
+          <span class="course-title-nav">Informatics II</span>
+        </div>
+        <div class="nav-right">
+          <button class="btn btn-sm btn-primary" onclick="navigateTo('screen-teacher-whiteboard')">+ Start Session</button>
+          <div class="profile-avatar teacher-avatar" onclick="navigateTo('screen-teacher-profile')">TS</div>
+        </div>
+      </nav>
+      <div class="course-page">
+        <div class="course-header-banner" style="background: linear-gradient(135deg, #667eea, #764ba2)">
+          <h2>Informatics II</h2>
+          <p>12 students &bull; Code: ABC123</p>
+          <div class="banner-actions">
+            <button class="btn btn-sm btn-white" onclick="showModal('edit-course-modal')"><i data-lucide="pencil" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Edit Course</button>
+            <button class="btn btn-sm btn-white" onclick="showModal('share-course-modal')"><i data-lucide="qr-code" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Share QR Code</button>
+          </div>
+        </div>
+        <div class="course-tabs">
+          <button class="tab active" onclick="switchTab(this, 'teacher-sessions-tab')">Sessions</button>
+          <button class="tab" onclick="switchTab(this, 'teacher-materials-tab')">Materials</button>
+          <button class="tab" onclick="switchTab(this, 'teacher-students-tab')">Students</button>
+          <button class="tab" onclick="switchTab(this, 'teacher-leaderboard-tab')">Leaderboard</button>
+        </div>
+        <div class="tab-content active" id="teacher-sessions-tab">
+          <div class="session-list">
+            <div class="session-item active-session" onclick="navigateTo('screen-teacher-whiteboard')">
+              <div class="session-status live">LIVE</div>
+              <div class="session-info">
+                <h4>Lecture 5: Data Structures</h4>
+                <p>Started 10 min ago &bull; 8 students</p>
+              </div>
+              <button class="btn btn-sm btn-primary">Resume</button>
+            </div>
+            <div class="session-item">
+              <div class="session-status ended">Ended</div>
+              <div class="session-info">
+                <h4>Lecture 4: Algorithms</h4>
+                <p>Mar 15, 2026 &bull; 10 students</p>
+              </div>
+              <span class="pdf-badge">PDF saved</span>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="navigateTo('screen-teacher-whiteboard')" style="margin-top:16px">+ Start New Session</button>
+        </div>
+        <div class="tab-content" id="teacher-materials-tab">
+          <div class="materials-list">
+            <div class="material-item">
+              <span class="material-icon"><i data-lucide="file-text" style="width:24px;height:24px"></i></span>
+              <div class="material-info">
+                <h4>Lecture 4 - Whiteboard.pdf</h4>
+                <p>Auto-saved &bull; Mar 15</p>
+              </div>
+              <button class="btn btn-sm btn-outline">Download</button>
+            </div>
+            <div class="upload-area">
+              <p><i data-lucide="upload" style="width:20px;height:20px;display:inline;vertical-align:-4px"></i> Upload materials for sessions</p>
+              <button class="btn btn-sm btn-outline">Upload PDF</button>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content" id="teacher-students-tab">
+          <div class="student-list">
+            <div class="student-row">
+              <div class="student-avatar">AC</div>
+              <div class="student-info">
+                <span class="student-name">Alice Chen</span>
+                <span class="student-username">@alice_c</span>
+              </div>
+              <span class="student-points">245 pts</span>
+            </div>
+            <div class="student-row">
+              <div class="student-avatar">BW</div>
+              <div class="student-info">
+                <span class="student-name">Bob Wilson</span>
+                <span class="student-username">@bob_w</span>
+              </div>
+              <span class="student-points">210 pts</span>
+            </div>
+            <div class="student-row">
+              <div class="student-avatar">JS</div>
+              <div class="student-info">
+                <span class="student-name">John Smith</span>
+                <span class="student-username">@john_smith</span>
+              </div>
+              <span class="student-points">185 pts</span>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content" id="teacher-leaderboard-tab">
+          <div class="leaderboard">
+            <div class="leaderboard-header">
+              <span>Rank</span>
+              <span>Student</span>
+              <span>Points</span>
+            </div>
+            <div class="leaderboard-row gold">
+              <span class="rank"><i data-lucide="trophy" style="width:16px;height:16px;display:inline;vertical-align:-3px;color:#FFD700"></i> 1</span>
+              <span class="name">Alice Chen</span>
+              <span class="points">245 pts</span>
+            </div>
+            <div class="leaderboard-row silver">
+              <span class="rank"><i data-lucide="trophy" style="width:16px;height:16px;display:inline;vertical-align:-3px;color:#C0C0C0"></i> 2</span>
+              <span class="name">Bob Wilson</span>
+              <span class="points">210 pts</span>
+            </div>
+            <div class="leaderboard-row bronze">
+              <span class="rank"><i data-lucide="trophy" style="width:16px;height:16px;display:inline;vertical-align:-3px;color:#CD7F32"></i> 3</span>
+              <span class="name">John Smith</span>
+              <span class="points">185 pts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TEACHER PROFILE ==================== -->
+    <div class="screen teacher-ui" id="screen-teacher-profile">
+      <nav class="top-nav">
+        <div class="nav-left">
+          <button class="back-btn-nav" onclick="navigateTo('screen-teacher-dashboard')"><i data-lucide="arrow-left" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Back</button>
+          <span class="course-title-nav">My Profile</span>
+        </div>
+        <div class="nav-right">
+          <button class="btn btn-sm btn-danger" onclick="navigateTo('screen-welcome')"><i data-lucide="log-out" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Logout</button>
+        </div>
+      </nav>
+      <div class="profile-page">
+        <div class="profile-card">
+          <div class="profile-avatar-large teacher-avatar">TS</div>
+          <div class="profile-details">
+            <div class="profile-field">
+              <label>Username</label>
+              <div class="field-row">
+                <span>teacher_smith</span>
+                <button class="edit-btn" onclick="toggleEdit(this)"><i data-lucide="pencil" style="width:13px;height:13px;display:inline;vertical-align:-2px"></i> Edit</button>
+              </div>
+            </div>
+            <div class="profile-field">
+              <label>First Name</label>
+              <div class="field-row">
+                <span>Teacher</span>
+                <button class="edit-btn" onclick="toggleEdit(this)"><i data-lucide="pencil" style="width:13px;height:13px;display:inline;vertical-align:-2px"></i> Edit</button>
+              </div>
+            </div>
+            <div class="profile-field">
+              <label>Last Name</label>
+              <div class="field-row">
+                <span>Smith</span>
+                <button class="edit-btn" onclick="toggleEdit(this)"><i data-lucide="pencil" style="width:13px;height:13px;display:inline;vertical-align:-2px"></i> Edit</button>
+              </div>
+            </div>
+            <div class="profile-field">
+              <label>Role</label>
+              <div class="field-row">
+                <span class="role-badge teacher"><i data-lucide="presentation" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Teacher</span>
+              </div>
+            </div>
+            <button class="btn btn-outline btn-full" onclick="showModal('password-modal')">Change Password</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SIMPLE SESSION (STUDENT) ==================== -->
+    <div class="screen" id="screen-simple-session">
+      <nav class="top-nav">
+        <div class="nav-left">
+          <button class="back-btn-nav" onclick="navigateTo('screen-student-join')"><i data-lucide="arrow-left" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Back</button>
+          <span class="course-title-nav">Simple Session</span>
+        </div>
+        <div class="nav-right">
+          <div class="profile-avatar" onclick="navigateTo('screen-student-profile')">JS</div>
+        </div>
+      </nav>
+      <div class="content-center">
+        <div class="join-card">
+          <h2>Simple Session</h2>
+          <p>A shared whiteboard to draw with friends. Not part of any course.</p>
+          <div class="simple-session-options">
+            <button class="btn btn-primary btn-full" onclick="navigateTo('screen-simple-whiteboard')">Create Session</button>
+            <div class="divider"><span>or join existing</span></div>
+            <div class="code-input-group">
+              <input type="text" class="code-input" placeholder="Enter session code">
+              <button class="btn btn-primary" onclick="navigateTo('screen-simple-whiteboard')">Join</button>
+            </div>
+          </div>
+          <div class="info-box">
+            <p><i data-lucide="alert-triangle" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Session ends when the creator leaves. Materials are not saved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== SIMPLE WHITEBOARD ==================== -->
+    <div class="screen" id="screen-simple-whiteboard">
+      <div class="whiteboard-layout">
+        <div class="whiteboard-toolbar">
+          <div class="toolbar-left">
+            <button class="tool-btn" onclick="navigateTo('screen-student-join')" title="Leave"><i data-lucide="x" style="width:18px;height:18px"></i></button>
+            <span class="session-label">Simple Session &bull; Code: SMP42</span>
+          </div>
+          <div class="toolbar-center">
+            <button class="tool-btn active" title="Pen"><i data-lucide="pen-tool" style="width:18px;height:18px"></i></button>
+            <button class="tool-btn" title="Eraser"><i data-lucide="eraser" style="width:18px;height:18px"></i></button>
+            <button class="tool-btn" title="Shapes"><i data-lucide="square" style="width:18px;height:18px"></i></button>
+            <button class="tool-btn" title="Text"><i data-lucide="type" style="width:18px;height:18px"></i></button>
+            <input type="color" class="color-picker" value="#000000">
+            <select class="stroke-select">
+              <option>Thin</option>
+              <option selected>Medium</option>
+              <option>Thick</option>
+            </select>
+          </div>
+          <div class="toolbar-right">
+            <span class="participants-badge"><i data-lucide="users" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> 3 online</span>
+          </div>
+        </div>
+        <div class="whiteboard-canvas shared-canvas">
+          <div class="canvas-placeholder">
+            <p>Shared Whiteboard</p>
+            <p class="hint">Everyone can draw here</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== STUDENT WHITEBOARD (IN SESSION) ==================== -->
+    <div class="screen" id="screen-student-whiteboard">
+      <div class="whiteboard-layout">
+        <div class="whiteboard-toolbar">
+          <div class="toolbar-left">
+            <button class="tool-btn" onclick="showModal('leave-session-modal')" title="Leave"><i data-lucide="x" style="width:18px;height:18px"></i></button>
+            <span class="session-label">Lecture 5: Data Structures</span>
+          </div>
+          <div class="toolbar-center">
+            <button class="tool-btn active" title="Pen"><i data-lucide="pen-tool" style="width:18px;height:18px"></i></button>
+            <button class="tool-btn" title="Eraser"><i data-lucide="eraser" style="width:18px;height:18px"></i></button>
+            <button class="tool-btn" title="Shapes"><i data-lucide="square" style="width:18px;height:18px"></i></button>
+            <button class="tool-btn" title="Text"><i data-lucide="type" style="width:18px;height:18px"></i></button>
+            <input type="color" class="color-picker" value="#000000">
+            <select class="stroke-select">
+              <option>Thin</option>
+              <option selected>Medium</option>
+              <option>Thick</option>
+            </select>
+          </div>
+          <div class="toolbar-right">
+            <span class="participants-badge"><i data-lucide="users" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> 8 online</span>
+            <button class="tool-btn chat-toggle" onclick="toggleChat()" title="Chat"><i data-lucide="message-circle" style="width:18px;height:18px"></i></button>
+          </div>
+        </div>
+        <div class="whiteboard-split">
+          <div class="whiteboard-pane teacher-pane">
+            <div class="pane-header">
+              <span>Teacher's Whiteboard</span>
+              <div class="page-nav">
+                <button class="page-btn">◀</button>
+                <span>Page 2/5</span>
+                <button class="page-btn">▶</button>
+              </div>
+            </div>
+            <div class="whiteboard-canvas">
+              <div class="canvas-placeholder">
+                <p>Teacher's shared content</p>
+                <p class="hint">View only</p>
+              </div>
+            </div>
+          </div>
+          <div class="whiteboard-pane student-pane">
+            <div class="pane-header">
+              <span>Your Whiteboard</span>
+              <div class="page-nav">
+                <button class="page-btn">◀</button>
+                <span>Page 2/5</span>
+                <button class="page-btn">▶</button>
+              </div>
+            </div>
+            <div class="whiteboard-canvas editable">
+              <div class="canvas-placeholder">
+                <p>Your personal notes</p>
+                <p class="hint">Draw on top of teacher's content</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Chat Panel -->
+        <div class="chat-panel" id="chat-panel">
+          <div class="chat-header">
+            <span>Session Chat</span>
+            <button class="tool-btn" onclick="toggleChat()"><i data-lucide="x" style="width:16px;height:16px"></i></button>
+          </div>
+          <div class="chat-messages">
+            <div class="chat-msg">
+              <span class="chat-author">Alice Chen</span>
+              <span class="chat-time">10:32</span>
+              <p>Can you explain the tree diagram again?</p>
+            </div>
+            <div class="chat-msg teacher-msg">
+              <span class="chat-author">Prof. Böhlen</span>
+              <span class="chat-time">10:33</span>
+              <p>Sure, I'll draw it again on the next page.</p>
+            </div>
+            <div class="chat-msg">
+              <span class="chat-author">Bob Wilson</span>
+              <span class="chat-time">10:34</span>
+              <p>Thanks!</p>
+            </div>
+          </div>
+          <div class="chat-input">
+            <input type="text" placeholder="Type a message...">
+            <button class="btn btn-sm btn-primary">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TEACHER WHITEBOARD (IN SESSION) ==================== -->
+    <div class="screen teacher-ui" id="screen-teacher-whiteboard">
+      <div class="whiteboard-layout">
+        <div class="whiteboard-toolbar">
+          <div class="toolbar-left">
+            <button class="tool-btn" onclick="showModal('end-session-modal')" title="End Session"><i data-lucide="x" style="width:18px;height:18px"></i></button>
+            <span class="session-label">Lecture 5: Data Structures</span>
+          </div>
+          <div class="toolbar-center">
+            <button class="tool-btn active" title="Pen"><i data-lucide="pen-tool" style="width:18px;height:18px"></i></button>
+            <button class="tool-btn" title="Eraser"><i data-lucide="eraser" style="width:18px;height:18px"></i></button>
+            <button class="tool-btn" title="Shapes"><i data-lucide="square" style="width:18px;height:18px"></i></button>
+            <button class="tool-btn" title="Text"><i data-lucide="type" style="width:18px;height:18px"></i></button>
+            <input type="color" class="color-picker" value="#000000">
+            <select class="stroke-select">
+              <option>Thin</option>
+              <option selected>Medium</option>
+              <option>Thick</option>
+            </select>
+            <div class="toolbar-divider"></div>
+            <button class="tool-btn" title="Upload Material"><i data-lucide="folder-up" style="width:18px;height:18px"></i></button>
+            <button class="tool-btn" title="Add Page"><i data-lucide="plus" style="width:18px;height:18px"></i></button>
+          </div>
+          <div class="toolbar-right">
+            <button class="tool-btn multimode-btn" onclick="toggleMultiMode(this)" title="Multi-mode"><i data-lucide="users" style="width:16px;height:16px;display:inline;vertical-align:-2px"></i> Multi</button>
+            <span class="participants-badge"><i data-lucide="users" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> 8 online</span>
+            <button class="tool-btn chat-toggle" onclick="toggleChat()" title="Chat"><i data-lucide="message-circle" style="width:18px;height:18px"></i></button>
+          </div>
+        </div>
+        <div class="student-tabs-bar">
+          <div class="student-tab active" onclick="selectStudentTab(this, '')">
+            <i data-lucide="pen-tool" style="width:13px;height:13px"></i>
+            My Whiteboard
+          </div>
+          <div class="student-tab" onclick="selectStudentTab(this, 'alice')">
+            <i data-lucide="user" style="width:13px;height:13px"></i>
+            Alice Chen
+          </div>
+          <div class="student-tab" onclick="selectStudentTab(this, 'bob')">
+            <i data-lucide="user" style="width:13px;height:13px"></i>
+            Bob Wilson
+          </div>
+          <div class="student-tab" onclick="selectStudentTab(this, 'john')">
+            <i data-lucide="user" style="width:13px;height:13px"></i>
+            John Smith
+          </div>
+        </div>
+        <div class="whiteboard-teacher-main">
+          <div class="whiteboard-canvas editable teacher-main-canvas">
+            <div class="canvas-placeholder">
+              <p>Teacher's Whiteboard</p>
+              <p class="hint">Draw here - students see in real time</p>
+            </div>
+            <div class="multimode-indicator" id="multimode-indicator" style="display:none">
+              <span><i data-lucide="users" style="width:16px;height:16px;display:inline;vertical-align:-2px"></i> Multi-Mode Active — All students can draw</span>
+            </div>
+          </div>
+          <div class="page-tabs-bar">
+            <div class="page-tabs-scroll">
+              <div class="page-tab" onclick="selectPageTab(this)" ondblclick="renamePageTab(this)">Page 1</div>
+              <div class="page-tab active" onclick="selectPageTab(this)" ondblclick="renamePageTab(this)">Page 2</div>
+              <div class="page-tab" onclick="selectPageTab(this)" ondblclick="renamePageTab(this)">Page 3</div>
+              <div class="page-tab" onclick="selectPageTab(this)" ondblclick="renamePageTab(this)">Page 4</div>
+              <div class="page-tab" onclick="selectPageTab(this)" ondblclick="renamePageTab(this)">Page 5</div>
+              <div class="page-tab add-page-tab" onclick="addPageTab(this)">
+                <i data-lucide="plus" style="width:14px;height:14px"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Student Whiteboard Side Panel -->
+        <div class="student-wb-panel" id="student-wb-panel">
+          <div class="student-wb-header">
+            <div class="student-wb-title">
+              <i data-lucide="user" style="width:16px;height:16px"></i>
+              <span id="student-wb-name">Alice Chen's Whiteboard</span>
+            </div>
+            <button class="tool-btn" onclick="toggleStudentPanel()" title="Collapse">
+              <i data-lucide="panel-left-close" style="width:18px;height:18px"></i>
+            </button>
+          </div>
+          <div class="student-wb-canvas">
+            <div class="canvas-placeholder">
+              <p>Student's personal whiteboard</p>
+              <p class="hint">You can annotate here</p>
+            </div>
+          </div>
+          <div class="student-wb-actions">
+            <button class="btn btn-sm btn-accent" onclick="showModal('points-modal')">
+              <i data-lucide="star" style="width:14px;height:14px"></i> Award Points
+            </button>
+            <button class="btn btn-sm btn-primary" onclick="showToast('Copied to teacher board!')">
+              <i data-lucide="copy" style="width:14px;height:14px"></i> Copy to My Board
+            </button>
+            <button class="btn btn-sm btn-outline" onclick="toggleStudentPanel()">
+              <i data-lucide="arrow-left" style="width:14px;height:14px"></i> Go Back
+            </button>
+          </div>
+        </div>
+        <!-- Chat Panel (reused) -->
+        <div class="chat-panel" id="teacher-chat-panel">
+          <div class="chat-header">
+            <span>Session Chat</span>
+            <button class="tool-btn" onclick="toggleChat()"><i data-lucide="x" style="width:16px;height:16px"></i></button>
+          </div>
+          <div class="chat-messages">
+            <div class="chat-msg">
+              <span class="chat-author">Alice Chen</span>
+              <span class="chat-time">10:32</span>
+              <p>Can you explain the tree diagram again?</p>
+            </div>
+            <div class="chat-msg self-msg">
+              <span class="chat-author">You</span>
+              <span class="chat-time">10:33</span>
+              <p>Sure, I'll draw it again on the next page.</p>
+            </div>
+          </div>
+          <div class="chat-input">
+            <input type="text" placeholder="Type a message...">
+            <button class="btn btn-sm btn-primary">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== MODALS ==================== -->
+
+    <!-- Create Course Modal -->
+    <div class="modal-overlay" id="create-course-modal" onclick="if(event.target===this)hideModal('create-course-modal')">
+      <div class="modal">
+        <div class="modal-header">
+          <h3>Create New Course</h3>
+          <button class="modal-close" onclick="hideModal('create-course-modal')"><i data-lucide="x" style="width:14px;height:14px"></i></button>
+        </div>
+        <form class="modal-body" onsubmit="event.preventDefault(); hideModal('create-course-modal'); navigateTo('screen-teacher-dashboard')">
+          <div class="form-group">
+            <label>Course Title *</label>
+            <input type="text" placeholder="e.g. Informatics II" required>
+          </div>
+          <div class="form-group">
+            <label>Description (optional)</label>
+            <textarea placeholder="Describe your course..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Course Image (optional)</label>
+            <div class="upload-area compact">
+              <p><i data-lucide="image-plus" style="width:20px;height:20px;display:inline;vertical-align:-4px"></i> Click to upload an image</p>
+            </div>
+          </div>
+          <div class="info-box">
+            <p>A unique course code and QR code will be generated automatically.</p>
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn btn-outline" onclick="hideModal('create-course-modal')">Cancel</button>
+            <button type="submit" class="btn btn-primary">Create Course</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Edit Course Modal -->
+    <div class="modal-overlay" id="edit-course-modal" onclick="if(event.target===this)hideModal('edit-course-modal')">
+      <div class="modal">
+        <div class="modal-header">
+          <h3><i data-lucide="pencil" style="width:14px;height:14px;display:inline;vertical-align:-2px"></i> Edit Course</h3>
+          <button class="modal-close" onclick="hideModal('edit-course-modal')"><i data-lucide="x" style="width:14px;height:14px"></i></button>
+        </div>
+        <form class="modal-body" onsubmit="event.preventDefault(); hideModal('edit-course-modal')">
+          <div class="form-group">
+            <label>Course Title *</label>
+            <input type="text" value="Informatics II" required>
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <textarea>Introduction to computer science fundamentals.</textarea>
+          </div>
+          <div class="form-group">
+            <label>Course Image</label>
+            <div class="upload-area compact">
+              <p><i data-lucide="image-plus" style="width:20px;height:20px;display:inline;vertical-align:-4px"></i> Click to change image</p>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn btn-outline" onclick="hideModal('edit-course-modal')">Cancel</button>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Delete Course Modal -->
+    <div class="modal-overlay" id="delete-course-modal" onclick="if(event.target===this)hideModal('delete-course-modal')">
+      <div class="modal modal-sm">
+        <div class="modal-header">
+          <h3>Delete Course?</h3>
+          <button class="modal-close" onclick="hideModal('delete-course-modal')"><i data-lucide="x" style="width:14px;height:14px"></i></button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to delete <strong>Informatics II</strong>? This action cannot be undone.</p>
+          <p class="warning-text">All sessions, materials, and student enrollments will be permanently removed.</p>
+          <div class="modal-actions">
+            <button class="btn btn-outline" onclick="hideModal('delete-course-modal')">Cancel</button>
+            <button class="btn btn-danger" onclick="hideModal('delete-course-modal')">Delete Course</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Share QR Modal -->
+    <div class="modal-overlay" id="share-course-modal" onclick="if(event.target===this)hideModal('share-course-modal')">
+      <div class="modal modal-sm">
+        <div class="modal-header">
+          <h3>Share Course</h3>
+          <button class="modal-close" onclick="hideModal('share-course-modal')"><i data-lucide="x" style="width:14px;height:14px"></i></button>
+        </div>
+        <div class="modal-body center-content">
+          <div class="qr-placeholder">
+            <div class="qr-code">
+              <div class="qr-grid"></div>
+            </div>
+          </div>
+          <p class="course-code-display">Course Code: <strong>ABC123</strong></p>
+          <div class="modal-actions stacked">
+            <button class="btn btn-primary btn-full"><i data-lucide="mail" style="width:16px;height:16px;display:inline;vertical-align:-2px"></i> Share via Outlook</button>
+            <button class="btn btn-outline btn-full" onclick="showToast('Code copied to clipboard!')"><i data-lucide="clipboard-copy" style="width:16px;height:16px;display:inline;vertical-align:-2px"></i> Copy Code</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Leave Session Modal -->
+    <div class="modal-overlay" id="leave-session-modal" onclick="if(event.target===this)hideModal('leave-session-modal')">
+      <div class="modal modal-sm">
+        <div class="modal-header">
+          <h3>Leave Session</h3>
+          <button class="modal-close" onclick="hideModal('leave-session-modal')"><i data-lucide="x" style="width:14px;height:14px"></i></button>
+        </div>
+        <div class="modal-body">
+          <p>Would you like to save your whiteboard as a PDF before leaving?</p>
+          <div class="modal-actions stacked">
+            <button class="btn btn-primary btn-full" onclick="hideModal('leave-session-modal'); showToast('PDF downloaded!'); navigateTo('screen-student-course')"><i data-lucide="file-down" style="width:16px;height:16px;display:inline;vertical-align:-2px"></i> Save as PDF & Leave</button>
+            <button class="btn btn-outline btn-full" onclick="hideModal('leave-session-modal'); navigateTo('screen-student-course')">Leave Without Saving</button>
+            <button class="btn btn-ghost btn-full" onclick="hideModal('leave-session-modal')">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End Session Modal (Teacher) -->
+    <div class="modal-overlay" id="end-session-modal" onclick="if(event.target===this)hideModal('end-session-modal')">
+      <div class="modal modal-sm">
+        <div class="modal-header">
+          <h3>End Session</h3>
+          <button class="modal-close" onclick="hideModal('end-session-modal')"><i data-lucide="x" style="width:14px;height:14px"></i></button>
+        </div>
+        <div class="modal-body">
+          <p>Ending the session will:</p>
+          <ul class="modal-list">
+            <li>Save your whiteboard as a PDF in the course</li>
+            <li>Prompt all students to save their whiteboards</li>
+            <li>Delete all chat messages</li>
+          </ul>
+          <div class="modal-actions">
+            <button class="btn btn-outline" onclick="hideModal('end-session-modal')">Cancel</button>
+            <button class="btn btn-danger" onclick="hideModal('end-session-modal'); navigateTo('screen-teacher-course')">End Session</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Change Password Modal -->
+    <div class="modal-overlay" id="password-modal" onclick="if(event.target===this)hideModal('password-modal')">
+      <div class="modal modal-sm">
+        <div class="modal-header">
+          <h3>Change Password</h3>
+          <button class="modal-close" onclick="hideModal('password-modal')"><i data-lucide="x" style="width:14px;height:14px"></i></button>
+        </div>
+        <form class="modal-body" onsubmit="event.preventDefault(); hideModal('password-modal'); showToast('Password changed. Please log in again.'); navigateTo('screen-login')">
+          <div class="form-group">
+            <label>Current Password *</label>
+            <input type="password" placeholder="Enter current password" required>
+          </div>
+          <div class="form-group">
+            <label>New Password *</label>
+            <input type="password" placeholder="Enter new password" required>
+          </div>
+          <div class="form-group">
+            <label>Confirm New Password *</label>
+            <input type="password" placeholder="Confirm new password" required>
+          </div>
+          <div class="modal-actions">
+            <button type="button" class="btn btn-outline" onclick="hideModal('password-modal')">Cancel</button>
+            <button type="submit" class="btn btn-primary">Change Password</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Award Points Modal -->
+    <div class="modal-overlay" id="points-modal" onclick="if(event.target===this)hideModal('points-modal')">
+      <div class="modal modal-sm">
+        <div class="modal-header">
+          <h3>Award Brownie Points</h3>
+          <button class="modal-close" onclick="hideModal('points-modal')"><i data-lucide="x" style="width:14px;height:14px"></i></button>
+        </div>
+        <div class="modal-body">
+          <p>Award points to <strong>Alice Chen</strong> for participation.</p>
+          <div class="points-selector">
+            <button class="points-btn" onclick="selectPoints(this, 5)">+5</button>
+            <button class="points-btn active" onclick="selectPoints(this, 10)">+10</button>
+            <button class="points-btn" onclick="selectPoints(this, 15)">+15</button>
+            <button class="points-btn" onclick="selectPoints(this, 20)">+20</button>
+          </div>
+          <div class="modal-actions">
+            <button class="btn btn-outline" onclick="hideModal('points-modal')">Cancel</button>
+            <button class="btn btn-primary" onclick="hideModal('points-modal'); showToast('10 points awarded to Alice Chen!')">Award Points</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+  </div>
+
+  <script src="app.js?v=7"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

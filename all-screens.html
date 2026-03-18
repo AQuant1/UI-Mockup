@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Classroom - All Screens Export</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Override base styles for export view */
+    html, body {
+      overflow: auto !important;
+      height: auto !important;
+      background: #E8EBF0;
+    }
+    #app { display: none; }
+
+    .export-page {
+      padding: 60px;
+      min-height: 100vh;
+    }
+    .export-title {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.03em;
+      margin-bottom: 6px;
+    }
+    .export-subtitle {
+      font-size: 16px;
+      color: var(--text-secondary);
+      margin-bottom: 60px;
+    }
+    .screen-section {
+      margin-bottom: 80px;
+    }
+    .screen-label {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--primary);
+      margin-bottom: 14px;
+    }
+    .screen-frame {
+      width: 1440px;
+      height: 900px;
+      background: var(--bg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+      position: relative;
+      border: 1px solid var(--border);
+    }
+    .screen-frame .screen-inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Modal cards: displayed inline without overlay */
+    .modal-section {
+      margin-bottom: 60px;
+    }
+    .modal-frame {
+      display: inline-block;
+      background: var(--bg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+      border: 1px solid var(--border);
+      padding: 40px;
+    }
+
+    /* Override .screen styles inside frames */
+    .screen-frame .top-nav {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Section dividers */
+    .section-divider {
+      margin: 80px 0 60px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--border);
+    }
+    .section-divider h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    .section-divider p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+
+    /* Make tab-content visible in export frames */
+    .screen-frame .tab-content.force-show {
+      display: block !important;
+    }
+
+    /* Make chat panel visible when forced */
+    .screen-frame .chat-panel.force-show {
+      display: flex !important;
+    }
+
+    /* Make multimode indicator visible when forced */
+    .screen-frame .multimode-indicator.force-show {
+      display: block !important;
+    }
+
+    /* Make error messages visible when forced */
+    .screen-frame .error-msg.force-show {
+      display: block !important;
+    }
+
+    /* Make award points button visible when forced */
+    .screen-frame .btn.force-show {
+      display: inline-flex !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="export-page">
+    <h1 class="export-title">Virtual Classroom - All Screens</h1>
+    <p class="export-subtitle">Complete screen export for Figma import (html.to.design). 16 screens + 7 modals.</p>
+
+    <!-- ======================== SCREEN 1: WELCOME ======================== -->
+    <div class="screen-section">
+      <div class="screen-label">01 / Welcome</div>
+      <div class="screen-frame">
+        <div class="screen-inner">
+          <div class="welcome-container">
+            <div class="logo">
+              <div class="logo-icon">📚</div>
+              <h1>Virtual Classroom</h1>
+              <p class="subtitle">Interactive Learning Platform</p>
+            </div>
+            <p class="welcome-text">Choose your role to get started</p>
+            <div class="role-cards">
+              <div class="role-card">
+                <div class="role-icon">🎓</div>
+                <h3>Student</h3>
+                <p>Join courses, collaborate, and learn</p>
+              </div>
+              <div class="role-card">
+                <div class="role-icon">👨‍🏫</div>
+                <h3>Teacher</h3>
+                <p>Create courses and manage sessions</p>
+              </div>
+            </div>
+            <p class="login-link">Already have an account? <a href="#">Log in</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== SCREEN 2: STUDENT REGISTRATION ======================== -->
+    <div class="screen-section">
+      <div class="screen-label">02 / Student Registration</div>
+      <div class="screen-frame">
+        <div class="screen-inner">
+          <div class="auth-container">
+            <button class="back-btn">← Back</button>
+            <div class="auth-header">
+              <div class="role-badge student">🎓 Student</div>
+              <h2>Create Your Account</h2>
+              <p>Fill in your details to get started</p>
+            </div>
+            <form class="auth-form" onsubmit="event.preventDefault()">
+              <div class="form-group">
+                <label>First Name *</label>
+                <input type="text" placeholder="Enter your first name">
+              </div>
+              <div class="form-group">
+                <label>Last Name *</label>
+                <input type="text" placeholder="Enter your last name">
+              </div>
+              <div class="form-group">
+                <label>Username *</label>
+                <input type="text" placeholder="Choose a unique username">
+                <span class="field-hint">Must be unique</span>
+              </div>
+              <div class="form-group">
+                <label>Password *</label>
+                <input type="password" placeholder="Create a password">
+              </div>
+              <button type="button" class="btn btn-primary btn-full">Sign Up</button>
+            </form>
+            <p class="auth-switch">Already have an account? <a href="#">Log in</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== SCREEN 3: TEACHER REGISTRATION ======================== -->
+    <div class="screen-section">
+      <div class="screen-label">03 / Teacher Registration</div>
+      <div class="screen-frame">
+        <div class="screen-inner">
+          <div class="auth-container">
+            <button class="back-btn">← Back</button>
+            <div class="auth-header">
+              <div class="role-badge teacher">👨‍🏫 Teacher</div>
+              <h2>Create Teacher Account</h2>
+              <p>Set up your teaching profile</p>
+            </div>
+            <form class="auth-form" onsubmit="event.preventDefault()">
+              <div class="form-group">
+                <label>First Name *</label>
+                <input type="text" placeholder="Enter your first name">
+              </div>
+              <div class="form-group">
+                <label>Last Name *</label>
+                <input type="text" placeholder="Enter your last name">
+              </div>
+              <div class="form-group">
+                <label>Username *</label>
+                <input type="text" placeholder="Choose a unique username">
+                <span class="field-hint">Must be unique</span>
+              </div>
+              <div class="form-group">
+                <label>Password *</label>
+                <input type="password" placeholder="Create a password">
+              </div>
+              <button type="button" class="btn btn-primary btn-full">Sign Up as Teacher</button>
+            </form>
+            <p class="auth-switch">Already have an account? <a href="#">Log in</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== SCREEN 4: LOGIN ======================== -->
+    <div class="screen-section">
+      <div class="screen-label">04 / Login</div>
+      <div class="screen-frame">
+        <div class="screen-inner">
+          <div class="auth-container">
+            <button class="back-btn">← Back</button>
+            <div class="auth-header">
+              <h2>Welcome Back</h2>
+              <p>Log in to your account</p>
+            </div>
+            <form class="auth-form" onsubmit="event.preventDefault()">
+              <div class="form-group">
+                <label>Username</label>
+                <input type="text" placeholder="Enter your username">
+              </div>
+              <div class="form-group">
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password">
+              </div>
+              <div class="login-role-toggle">
+                <label class="toggle-label">Login as:</label>
+                <div class="toggle-group">
+                  <button type="button" class="toggle-btn active">Student</button>
+                  <button type="button" class="toggle-btn">Teacher</button>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary btn-full">Log In</button>
+            </form>
+            <p class="auth-switch">Don't have an account? <a href="#">Sign up</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== SCREEN 5: STUDENT JOIN COURSE ======================== -->
+    <div class="screen-section">
+      <div class="screen-label">05 / Student Join Course</div>
+      <div class="screen-frame">
+        <div class="screen-inner">
+          <nav class="top-nav">
+            <div class="nav-left">
+              <div class="logo-small">📚 Virtual Classroom</div>
+            </div>
+            <div class="nav-right">
+              <button class="nav-btn" title="My Courses">📋 My Courses</button>
+              <div class="profile-avatar">JS</div>
+            </div>
+          </nav>
+          <div class="content-center">
+            <div class="join-card">
+              <h2>Join a Course</h2>
+              <p>Enter the course code provided by your teacher</p>
+              <div class="code-input-group">
+                <input type="text" class="code-input" placeholder="Enter course code" maxlength="8">
+                <button class="btn btn-primary">Join</button>
+              </div>
+              <div class="divider"><span>or</span></div>
+              <button class="btn btn-outline">Start a Simple Session</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== SCREEN 6: STUDENT DASHBOARD ======================== -->
+    <div class="screen-section">
+      <div class="screen-label">06 / Student Dashboard</div>
+      <div class="screen-frame">
+        <div class="screen-inner">
+          <nav class="top-nav">
+            <div class="nav-left">
+              <div class="logo-small">📚 Virtual Classroom</div>
+            </div>
+            <div class="nav-right">
+              <button class="nav-btn">+ Join Course</button>
+              <button class="nav-btn">⚡ Simple Session</button>
+              <div class="profile-avatar">JS</div>
+            </div>
+          </nav>
+          <div class="dashboard-content">
+            <h2>My Courses</h2>
+            <div class="course-grid">
+              <div class="course-card">
+                <div class="course-img" style="background: linear-gradient(135deg, #667eea, #764ba2)">
+                  <span>CS</span>
+                </div>
+                <div class="course-info">
+                  <h3>Computer Science 101</h3>
+                  <p>Prof. Smith</p>
+                  <span class="course-code">Code: ABC123</span>
+                </div>
+              </div>
+              <div class="course-card">
+                <div class="course-img" style="background: linear-gradient(135deg, #f093fb, #f5576c)">
+                  <span>MA</span>
+                </div>
+                <div class="course-info">
+                  <h3>Mathematics II</h3>
+                  <p>Prof. Johnson</p>
+                  <span class="course-code">Code: XYZ789</span>
+                </div>
+              </div>
+              <div class="course-card">
+                <div class="course-img" style="background: linear-gradient(135deg, #4facfe, #00f2fe)">
+                  <span>PH</span>
+                </div>
+                <div class="course-info">
+                  <h3>Physics Lab</h3>
+                  <p>Prof. Williams</p>
+                  <span class="course-code">Code: PHY456</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== SCREEN 7: STUDENT COURSE PAGE (Sessions Tab) ======================== -->
+    <div class="screen-section">
+      <div class="screen-label">07 / Student Course Page (Sessions Tab)</div>
+      <div class="screen-frame">
+        <div class="screen-inner">
+          <nav class="top-nav">
+            <div class="nav-left">
+              <button class="back-btn-nav">← Back</button>
+              <span class="course-title-nav">Computer Science 101</span>
+            </div>
+            <div class="nav-right">
+              <div class="profile-avatar">JS</div>
+            </div>
+          </nav>
+          <div class="course-page">
+            <div class="course-header-banner" style="background: linear-gradient(135deg, #667eea, #764ba2)">
+              <h2>Computer Science 101</h2>
+              <p>Prof. Smith &bull; Code: ABC123</p>
+            </div>
+            <div class="course-tabs">
+              <button class="tab active">Sessions</button>
+              <button class="tab">Materials</button>
+              <button class="tab">Leaderboard</button>
+            </div>
+            <div class="tab-content force-show">
+              <div class="session-list">
+                <div class="session-item active-session">
+                  <div class="session-status live">LIVE</div>
+                  <div class="session-info">
+                    <h4>Lecture 5: Data Structures</h4>
+                    <p>Started 10 min ago</p>
+                  </div>
+                  <button class="btn btn-sm btn-primary">Join</button>
+                </div>
+                <div class="session-item">
+                  <div class="session-status ended">Ended</div>
+                  <div class="session-info">
+                    <h4>Lecture 4: Algorithms</h4>
+                    <p>Mar 15, 2026</p>
+                  </div>
+                  <button class="btn btn-sm btn-outline">View PDF</button>
+                </div>
+                <div class="session-item">
+                  <div class="session-status ended">Ended</div>
+                  <div class="session-info">
+                    <h4>Lecture 3: Variables &amp; Types</h4>
+                    <p>Mar 12, 2026</p>
+                  </div>
+                  <button class="btn btn-sm btn-outline">View PDF</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== SCREEN 8: STUDENT COURSE PAGE (Materials Tab + AI Summarize) ======================== -->
+    <div class="screen-section">
+      <div class="screen-label">08 / Student Course Page (Materials Tab with AI Summarize)</div>
+      <div class="screen-frame">
+        <div class="screen-inner">
+          <nav class="top-nav">
+            <div class="nav-left">
+              <button class="back-btn-nav">← Back</button>
+              <span class="course-title-nav">Computer Science 101</span>
+            </div>
+            <div class="nav-right">
+              <div class="profile-avatar">JS</div>
+            </div>
+          </nav>
+          <div class="course-page">
+            <div class="course-header-banner" style="background: linear-gradient(135deg, #667eea, #764ba2)">
+              <h2>Computer Science 101</h2>
+              <p>Prof. Smith &bull; Code: ABC123</p>
+            </div>
+            <div class="course-tabs">
+              <button class="tab">Sessions</button>
+              <button class="tab active">Materials</button>
+              <button class="tab">Leaderboard</button>
+            </div>
+            <div class="tab-content force-show">
+              <div class="materials-list">
+                <div class="material-item">
+                  <span class="material-icon">📄</span>
+                  <div class="material-info">
+                    <h4>Lecture 4 - Whiteboard.pdf</h4>
+                    <p>Teacher's whiteboard &bull; Mar 15</p>
+                  </div>
+                  <div class="material-actions">
+                    <button class="btn btn-sm btn-outline">Download</button>
+                    <button class="btn btn-sm btn-accent">🤖 Summarize</button>
+                  </div>
+                </div>
+                <div class="material-item">
+                  <span class="material-icon">📄</span>
+                  <div class="material-info">
+                    <h4>Lecture 3 - Whiteboard.pdf</h4>
+                    <p>Teacher's whiteboard &bull; Mar 12</p>
+                  </div>
+                  <div class="material-actions">
+                    <button class="btn btn-sm btn-outline">Download</button>
+                    <button class="btn btn-sm btn-accent">🤖 Summarize</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== SCREEN 9: STUDENT COURSE PAGE (Leaderboard Tab) ======================== -->
+    <div class="screen-section">
+      <div class="screen-label">09 / Student Course Page (Leaderboard Tab)</div>
+      <div class="screen-frame">
+        <div class="screen-inner">
+          <nav class="top-nav">
+            <div class="nav-left">
+              <button class="back-btn-nav">← Back</button>
+              <span class="course-title-nav">Computer Science 101</span>
+            </div>
+            <div class="nav-right">
+              <div class="profile-avatar">JS</div>
+            </div>
+          </nav>
+          <div class="course-page">
+            <div class="course-header-banner" style="background: linear-gradient(135deg, #667eea, #764ba2)">
+              <h2>Computer Science 101</h2>
+              <p>Prof. Smith &bull; Code: ABC123</p>
+            </div>
+            <div class="course-tabs">
+              <button class="tab">Sessions</button>
+              <button class="tab">Materials</button>
+              <button class="tab active">Leaderboard</button>
+            </div>
+            <div class="tab-content force-show">
+              <div class="leaderboard">
+                <div class="leaderboard-header">
+                  <span>Rank</span>
+                  <span>Student</span>
+                  <span>Points</span>
+                </div>
+                <div class="leaderboard-row gold">
+                  <span class="rank">🥇 1</span>
+                  <span class="name">Alice Chen</span>
+                  <span class="points">245 pts</span>
+                </div>
+                <div class="leaderboard-row silver">
+                  <span class="rank">🥈 2</span>
+                  <span class="name">Bob Wilson</span>
+                  <span class="points">210 pts</span>
+                </div>
+                <div class="leaderboard-row bronze">
+                  <span class="rank">🥉 3</span>
+                  <span class="name">John Smith (You)</span>
+                  <span class="points">185 pts</span>
+                </div>
+                <div class="leaderboard-row">
+                  <span class="rank">4</span>
+                  <span class="name">Diana Ross</span>
+                  <span class="points">160 pts</span>
+                </div>
+                <div class="leaderboard-row">
+                  <span class="rank">5</span>
+                  <span class="name">Eve Miller</span>
+                  <span class="points">140 pts</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== SCREEN 10: STUDENT PROFILE ======================== -->
+    <div class="screen-section">
+      <div class="screen-label">10 / Student Profile</div>
+      <div class="screen-frame">
+        <div class="screen-inner">
+          <nav class="top-nav">
+            <div class="nav-left">
+              <button class="back-btn-nav">← Back</button>
+              <span class="course-title-nav">My Profile</span>
+            </div>
+            <div class="nav-right">
+              <button class="btn btn-sm btn-danger">Logout</button>
+            </div>
+          </nav>
+          <div class="profile-page">
+            <div class="profile-card">
+              <div class="profile-avatar-large">JS</div>
+              <div class="profile-details">
+                <div class="profile-field">
+                  <label>Username</label>
+                  <div class="field-row">
+                    <span>john_smith</span>
+                    <button class="edit-btn">✏️ Edit</button>
+                  </div>
+                </div>
+                <div class="profile-field">
+                  <label>First Name</label>
+                  <div class="field-row">
+                    <span>John</span>
+                    <button class="edit-btn">✏️ Edit</button>
+                  </div>
+                </div>
+                <div class="profile-field">
+                  <label>Last Name</label>
+                  <div class="field-row">
+                    <span>Smith</span>
+                    <button class="edit-btn">✏️ Edit</button>
+                  </div>
+                </div>
+                <div class="profile-field">
+                  <label>Role</label>
+                  <div class="field-row">
+                    <span class="role-badge student">🎓 Student</span>
+                  </div>
+                </div>
+                <button class="btn btn-outline btn-full">Change Password</button>
+              </div>
+            </div>
+            <div class="profile-courses">
+              <h3>Enrolled Courses</h3>
+              <div class="mini-course-list">
+                <div class="mini-course">
+                  <div class="mini-dot" style="background: #667eea"></div>
+                  <span>Computer Science 101</span>
+                </div>
+                <div class="mini-course">
+                  <div class="mini-dot" style="background: #f5576c"></div>
+                  <span>Mathematics II</span>
+                </div>
+                <div class="mini-course">
+                  <div class="mini-dot" style="background: #4facfe"></div>
+                  <span>Physics Lab</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== SCREEN 11: TEACHER DASHBOARD ======================== -->
+    <div class="screen-section">
+      <div class="screen-label">11 / Teacher Dashboard</div>
+      <div class="screen-frame">
+        <div class="screen-inner">
+          <nav class="top-nav">
+            <div class="nav-left">
+              <div class="logo-small">📚 Virtual Classroom</div>
+            </div>
+            <div class="nav-right">
+              <button class="btn btn-sm btn-primary">+ Create Course</button>
+              <div class="profile-avatar teacher-avatar">TS</div>
+            </div>
+          </nav>
+          <div class="dashboard-content">
+            <h2>My Courses</h2>
+            <div class="course-grid">
+              <div class="course-card teacher-card">
+                <div class="course-img" style="background: linear-gradient(135deg, #667eea, #764ba2)">
+                  <span>CS</span>
+                </div>
+                <div class="course-info">
+                  <h3>Computer Science 101</h3>
+                  <p>12 students &bull; 5 sessions</p>
+                  <span class="course-code">Code: ABC123</span>
+                </div>
+                <div class="card-actions">
+                  <button class="icon-btn" title="Edit">✏️</button>
+                  <button class="icon-btn" title="Delete">🗑️</button>
+                  <button class="icon-btn" title="Share QR">📤</button>
+                </div>
+              </div>
+              <div class="course-card teacher-card">
+                <div class="course-img" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb)">
+                  <span>DS</span>
+                </div>
+                <div class="course-info">
+                  <h3>Data Structures</h3>
+                  <p>8 students &bull; 3 sessions</p>
+                  <span class="course-code">Code: DST456</span>
+                </div>
+                <div class="card-actions">
+                  <button class="icon-btn" title="Edit">✏️</button>
+                  <button class="icon-btn" title="Delete">🗑️</button>
+                  <button class="icon-btn" title="Share QR">📤</button>
+                </div>
+              </div>
+              <div class="course-card add-course-card">
+                <div class="add-icon">+</div>
+                <p>Create New Course</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== SCREEN 12: TEACHER COURSE PAGE ======================== -->
+    <div class="screen-section">
+      <div class="screen-label">12 / Teacher Course Page</div>
+      <div class="screen-frame">
+        <div class="screen-inner">
+          <nav class="top-nav">
+            <div class="nav-left">
+              <button class="back-btn-nav">← Back</button>
+              <span class="course-title-nav">Computer Science 101</span>
+            </div>
+            <div class="nav-right">
+              <button class="btn btn-sm btn-primary">+ Start Session</button>
+              <div class="profile-avatar teacher-avatar">TS</div>
+            </div>
+          </nav>
+          <div class="course-page">
+            <div class="course-header-banner" style="background: linear-gradient(135deg, #667eea, #764ba2)">
+              <h2>Computer Science 101</h2>
+              <p>12 students &bull; Code: ABC123</p>
+              <div class="banner-actions">
+                <button class="btn btn-sm btn-white">Edit Course</button>
+                <button class="btn btn-sm btn-white">Share QR Code</button>
+              </div>
+            </div>
+            <div class="course-tabs">
+              <button class="tab active">Sessions</button>
+              <button class="tab">Materials</button>
+              <button class="tab">Students</button>
+              <button class="tab">Leaderboard</button>
+            </div>
+            <div class="tab-content force-show">
+              <div class="session-list">
+                <div class="session-item active-session">
+                  <div class="session-status live">LIVE</div>
+                  <div class="session-info">
+                    <h4>Lecture 5: Data Structures</h4>
+                    <p>Started 10 min ago &bull; 8 students</p>
+                  </div>
+                  <button class="btn btn-sm btn-primary">Resume</button>
+                </div>
+                <div class="session-item">
+                  <div class="session-status ended">Ended</div>
+                  <div class="session-info">
+                    <h4>Lecture 4: Algorithms</h4>
+                    <p>Mar 15, 2026 &bull; 10 students</p>
+                  </div>
+                  <span class="pdf-badge">PDF saved</span>
+                </div>
+              </div>
+              <button class="btn btn-primary" style="margin-top:16px">+ Start New Session</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== SCREEN 13: STUDENT WHITEBOARD (Split View) ======================== -->
+    <div class="screen-section">
+      <div class="screen-label">13 / Student Whiteboard (Split View)</div>
+      <div class="screen-frame">
+        <div class="screen-inner">
+          <div class="whiteboard-layout">
+            <div class="whiteboard-toolbar">
+              <div class="toolbar-left">
+                <button class="tool-btn" title="Leave">✕</button>
+                <span class="session-label">Lecture 5: Data Structures</span>
+              </div>
+              <div class="toolbar-center">
+                <button class="tool-btn active" title="Pen">✏️</button>
+                <button class="tool-btn" title="Eraser">🧹</button>
+                <button class="tool-btn" title="Shapes">⬜</button>
+                <button class="tool-btn" title="Text">T</button>
+                <input type="color" class="color-picker" value="#000000">
+                <select class="stroke-select">
+                  <option>Thin</option>
+                  <option selected>Medium</option>
+                  <option>Thick</option>
+                </select>
+              </div>
+              <div class="toolbar-right">
+                <span class="participants-badge">👥 8 online</span>
+                <button class="tool-btn chat-toggle" title="Chat">💬</button>
+              </div>
+            </div>
+            <div class="whiteboard-split">
+              <div class="whiteboard-pane teacher-pane">
+                <div class="pane-header">
+                  <span>Teacher's Whiteboard</span>
+                  <div class="page-nav">
+                    <button class="page-btn">◀</button>
+                    <span>Page 2/5</span>
+                    <button class="page-btn">▶</button>
+                  </div>
+                </div>
+                <div class="whiteboard-canvas">
+                  <div class="canvas-placeholder">
+                    <p>Teacher's shared content</p>
+                    <p class="hint">View only</p>
+                  </div>
+                </div>
+              </div>
+              <div class="whiteboard-pane student-pane">
+                <div class="pane-header">
+                  <span>Your Whiteboard</span>
+                  <div class="page-nav">
+                    <button class="page-btn">◀</button>
+                    <span>Page 2/5</span>
+                    <button class="page-btn">▶</button>
+                  </div>
+                </div>
+                <div class="whiteboard-canvas editable">
+                  <div class="canvas-placeholder">
+                    <p>Your personal notes</p>
+                    <p class="hint">Draw on top of teacher's content</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== SCREEN 14: TEACHER WHITEBOARD ======================== -->
+    <div class="screen-section">
+      <div class="screen-label">14 / Teacher Whiteboard</div>
+      <div class="screen-frame">
+        <div class="screen-inner">
+          <div class="whiteboard-layout">
+            <div class="whiteboard-toolbar">
+              <div class="toolbar-left">
+                <button class="tool-btn" title="End Session">✕</button>
+                <span class="session-label">Lecture 5: Data Structures</span>
+              </div>
+              <div class="toolbar-center">
+                <button class="tool-btn active" title="Pen">✏️</button>
+                <button class="tool-btn" title="Eraser">🧹</button>
+                <button class="tool-btn" title="Shapes">⬜</button>
+                <button class="tool-btn" title="Text">T</button>
+                <input type="color" class="color-picker" value="#000000">
+                <select class="stroke-select">
+                  <option>Thin</option>
+                  <option selected>Medium</option>
+                  <option>Thick</option>
+                </select>
+                <div class="toolbar-divider"></div>
+                <button class="tool-btn" title="Upload Material">📁</button>
+                <button class="tool-btn" title="Add Page">➕</button>
+              </div>
+              <div class="toolbar-right">
+                <button class="tool-btn multimode-btn" title="Multi-mode">🤝 Multi</button>
+                <span class="participants-badge">👥 8 online</span>
+                <button class="tool-btn chat-toggle" title="Chat">💬</button>
+              </div>
+            </div>
+            <div class="whiteboard-teacher-main">
+              <div class="whiteboard-canvas editable teacher-main-canvas">
+                <div class="canvas-placeholder">
+                  <p>Teacher's Whiteboard</p>
+                  <p class="hint">Draw here - students see in real time</p>
+                </div>
+              </div>
+              <div class="page-nav-bottom">
+                <button class="page-btn">◀</button>
+                <span>Page 2/5</span>
+                <button class="page-btn">▶</button>
+                <button class="page-btn">+ Add Page</button>
+              </div>
+              <div class="student-selector">
+                <label>View Student:</label>
+                <select class="student-select">
+                  <option value="">My Whiteboard</option>
+                  <option value="alice">Alice Chen</option>
+                  <option value="bob">Bob Wilson</option>
+                  <option value="john">John Smith</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== SCREEN 15: SIMPLE SESSION ======================== -->
+    <div class="screen-section">
+      <div class="screen-label">15 / Simple Session</div>
+      <div class="screen-frame">
+        <div class="screen-inner">
+          <nav class="top-nav">
+            <div class="nav-left">
+              <button class="back-btn-nav">← Back</button>
+              <span class="course-title-nav">Simple Session</span>
+            </div>
+            <div class="nav-right">
+              <div class="profile-avatar">JS</div>
+            </div>
+          </nav>
+          <div class="content-center">
+            <div class="join-card">
+              <h2>Simple Session</h2>
+              <p>A shared whiteboard to draw with friends. Not part of any course.</p>
+              <div class="simple-session-options">
+                <button class="btn btn-primary btn-full">Create Session</button>
+                <div class="divider"><span>or join existing</span></div>
+                <div class="code-input-group">
+                  <input type="text" class="code-input" placeholder="Enter session code">
+                  <button class="btn btn-primary">Join</button>
+                </div>
+              </div>
+              <div class="info-box">
+                <p>⚠️ Session ends when the creator leaves. Materials are not saved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== SCREEN 16: SIMPLE WHITEBOARD ======================== -->
+    <div class="screen-section">
+      <div class="screen-label">16 / Simple Whiteboard</div>
+      <div class="screen-frame">
+        <div class="screen-inner">
+          <div class="whiteboard-layout">
+            <div class="whiteboard-toolbar">
+              <div class="toolbar-left">
+                <button class="tool-btn" title="Leave">✕</button>
+                <span class="session-label">Simple Session &bull; Code: SMP42</span>
+              </div>
+              <div class="toolbar-center">
+                <button class="tool-btn active" title="Pen">✏️</button>
+                <button class="tool-btn" title="Eraser">🧹</button>
+                <button class="tool-btn" title="Shapes">⬜</button>
+                <button class="tool-btn" title="Text">T</button>
+                <input type="color" class="color-picker" value="#000000">
+                <select class="stroke-select">
+                  <option>Thin</option>
+                  <option selected>Medium</option>
+                  <option>Thick</option>
+                </select>
+              </div>
+              <div class="toolbar-right">
+                <span class="participants-badge">👥 3 online</span>
+              </div>
+            </div>
+            <div class="whiteboard-canvas shared-canvas">
+              <div class="canvas-placeholder">
+                <p>Shared Whiteboard</p>
+                <p class="hint">Everyone can draw here</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== MODALS SECTION ======================== -->
+    <div class="section-divider">
+      <h2>Modals &amp; Dialogs</h2>
+      <p>Standalone modal cards shown outside their overlay context</p>
+    </div>
+
+    <!-- MODAL 1: Create Course -->
+    <div class="screen-section">
+      <div class="screen-label">Modal A / Create Course</div>
+      <div class="modal-frame">
+        <div class="modal" style="position: relative; display: block; box-shadow: none; border: 1px solid var(--border);">
+          <div class="modal-header">
+            <h3>Create New Course</h3>
+            <button class="modal-close">✕</button>
+          </div>
+          <form class="modal-body" onsubmit="event.preventDefault()">
+            <div class="form-group">
+              <label>Course Title *</label>
+              <input type="text" placeholder="e.g. Computer Science 101">
+            </div>
+            <div class="form-group">
+              <label>Description (optional)</label>
+              <textarea placeholder="Describe your course..."></textarea>
+            </div>
+            <div class="form-group">
+              <label>Course Image (optional)</label>
+              <div class="upload-area compact">
+                <p>📁 Click to upload an image</p>
+              </div>
+            </div>
+            <div class="info-box">
+              <p>A unique course code and QR code will be generated automatically.</p>
+            </div>
+            <div class="modal-actions">
+              <button type="button" class="btn btn-outline">Cancel</button>
+              <button type="button" class="btn btn-primary">Create Course</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 2: Delete Course -->
+    <div class="screen-section">
+      <div class="screen-label">Modal B / Delete Course</div>
+      <div class="modal-frame">
+        <div class="modal modal-sm" style="position: relative; display: block; box-shadow: none; border: 1px solid var(--border);">
+          <div class="modal-header">
+            <h3>Delete Course?</h3>
+            <button class="modal-close">✕</button>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to delete <strong>Computer Science 101</strong>? This action cannot be undone.</p>
+            <p class="warning-text">All sessions, materials, and student enrollments will be permanently removed.</p>
+            <div class="modal-actions">
+              <button class="btn btn-outline">Cancel</button>
+              <button class="btn btn-danger">Delete Course</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 3: Share QR -->
+    <div class="screen-section">
+      <div class="screen-label">Modal C / Share QR Code</div>
+      <div class="modal-frame">
+        <div class="modal modal-sm" style="position: relative; display: block; box-shadow: none; border: 1px solid var(--border);">
+          <div class="modal-header">
+            <h3>Share Course</h3>
+            <button class="modal-close">✕</button>
+          </div>
+          <div class="modal-body center-content">
+            <div class="qr-placeholder">
+              <div class="qr-code">
+                <div class="qr-grid"></div>
+              </div>
+            </div>
+            <p class="course-code-display">Course Code: <strong>ABC123</strong></p>
+            <div class="modal-actions stacked">
+              <button class="btn btn-primary btn-full">📧 Share via Outlook</button>
+              <button class="btn btn-outline btn-full">📋 Copy Code</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 4: Leave Session -->
+    <div class="screen-section">
+      <div class="screen-label">Modal D / Leave Session</div>
+      <div class="modal-frame">
+        <div class="modal modal-sm" style="position: relative; display: block; box-shadow: none; border: 1px solid var(--border);">
+          <div class="modal-header">
+            <h3>Leave Session</h3>
+            <button class="modal-close">✕</button>
+          </div>
+          <div class="modal-body">
+            <p>Would you like to save your whiteboard as a PDF before leaving?</p>
+            <div class="modal-actions stacked">
+              <button class="btn btn-primary btn-full">📄 Save as PDF &amp; Leave</button>
+              <button class="btn btn-outline btn-full">Leave Without Saving</button>
+              <button class="btn btn-ghost btn-full">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 5: Change Password -->
+    <div class="screen-section">
+      <div class="screen-label">Modal E / Change Password</div>
+      <div class="modal-frame">
+        <div class="modal modal-sm" style="position: relative; display: block; box-shadow: none; border: 1px solid var(--border);">
+          <div class="modal-header">
+            <h3>Change Password</h3>
+            <button class="modal-close">✕</button>
+          </div>
+          <form class="modal-body" onsubmit="event.preventDefault()">
+            <div class="form-group">
+              <label>Current Password *</label>
+              <input type="password" placeholder="Enter current password">
+            </div>
+            <div class="form-group">
+              <label>New Password *</label>
+              <input type="password" placeholder="Enter new password">
+            </div>
+            <div class="form-group">
+              <label>Confirm New Password *</label>
+              <input type="password" placeholder="Confirm new password">
+            </div>
+            <div class="modal-actions">
+              <button type="button" class="btn btn-outline">Cancel</button>
+              <button type="button" class="btn btn-primary">Change Password</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 6: Award Points -->
+    <div class="screen-section">
+      <div class="screen-label">Modal F / Award Points</div>
+      <div class="modal-frame">
+        <div class="modal modal-sm" style="position: relative; display: block; box-shadow: none; border: 1px solid var(--border);">
+          <div class="modal-header">
+            <h3>Award Brownie Points</h3>
+            <button class="modal-close">✕</button>
+          </div>
+          <div class="modal-body">
+            <p>Award points to <strong>Alice Chen</strong> for participation.</p>
+            <div class="points-selector">
+              <button class="points-btn">+5</button>
+              <button class="points-btn active">+10</button>
+              <button class="points-btn">+15</button>
+              <button class="points-btn">+20</button>
+            </div>
+            <div class="modal-actions">
+              <button class="btn btn-outline">Cancel</button>
+              <button class="btn btn-primary">Award Points</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 7: Chat Panel -->
+    <div class="screen-section">
+      <div class="screen-label">Modal G / Chat Panel</div>
+      <div class="modal-frame">
+        <div style="width: 320px; background: rgba(255,255,255,0.85); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; height: 500px;">
+          <div class="chat-header">
+            <span>Session Chat</span>
+            <button class="tool-btn">✕</button>
+          </div>
+          <div class="chat-messages" style="flex: 1; overflow-y: auto;">
+            <div class="chat-msg">
+              <span class="chat-author">Alice Chen</span>
+              <span class="chat-time">10:32</span>
+              <p>Can you explain the tree diagram again?</p>
+            </div>
+            <div class="chat-msg teacher-msg">
+              <span class="chat-author">Prof. Smith</span>
+              <span class="chat-time">10:33</span>
+              <p>Sure, I'll draw it again on the next page.</p>
+            </div>
+            <div class="chat-msg">
+              <span class="chat-author">Bob Wilson</span>
+              <span class="chat-time">10:34</span>
+              <p>Thanks!</p>
+            </div>
+          </div>
+          <div class="chat-input">
+            <input type="text" placeholder="Type a message...">
+            <button class="btn btn-sm btn-primary">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end .export-page -->
+</body>
+</html>
